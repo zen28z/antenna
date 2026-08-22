@@ -5,2133 +5,2229 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>アンテナページ</title>
     <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; }
-        .item { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
-        .site-name { font-size: 0.8em; color: #666; }
+        /* カラーパレットの定義 */
+        :root {
+            --bg-color: #f3f4f6;
+            --text-color: #1f2937;
+            --card-bg: #ffffff;
+            --link-color: #2563eb;
+            --link-hover: #1d4ed8;
+            --meta-color: #6b7280;
+            --border-color: #e5e7eb;
+        }
+        
+        /* ダークモード対応 */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #111827;
+                --text-color: #f9fafb;
+                --card-bg: #1f2937;
+                --link-color: #60a5fa;
+                --link-hover: #93c5fd;
+                --meta-color: #9ca3af;
+                --border-color: #374151;
+            }
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.025em;
+        }
+
+        .update-time {
+            text-align: center;
+            color: var(--meta-color);
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px; /* カード間の余白 */
+        }
+
+        /* カードデザイン */
+        .item {
+            background: var(--card-bg);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* ホバー時のアニメーション */
+        .item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.05);
+            border-color: var(--link-color);
+        }
+
+        .item-title {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        .item-title:hover {
+            color: var(--link-hover);
+        }
+
+        /* サイト名のバッジ風デザイン */
+        .site-name {
+            display: inline-block;
+            background-color: var(--border-color);
+            color: var(--text-color);
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            align-self: flex-start;
+        }
     </style>
 </head>
 <body>
     <h1>アンテナページ</h1>
-    <p>最終更新: 2026-08-22 09:32:20</p>
+    <div class="update-time">最終更新: 2026-08-22 09:41:27</div>
     <div class="container">
 
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587920.html" target="_blank" rel="noopener noreferrer">【画像】よゐこ、ゲームチャンネルを新たに立ち上げマイクラに挑戦ｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63429582.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】一般的な店舗のポップや広告、もはやAIイラストを使うのが当たり前になってしまう</a>
+            <span class="site-name">IT速報</span>
+        </div>
+    
+        <div class="item">
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701076.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】マックで『ドリンクS』だけですげぇ量の教材持ち込んで勉強にはげむ学生が晒されるｗｗｗｗ</a>
+            <span class="site-name">キニ速</span>
+        </div>
+    
+        <div class="item">
+            <a href="http://blog.livedoor.jp/goldennews/archives/52307076.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】オンクレでの神アシストが話題に</a>
+            <span class="site-name">ゴールデンタイムズ</span>
+        </div>
+    
+        <div class="item">
+            <a href="https://news4vip.livedoor.biz/archives/52587920.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】よゐこ、ゲームチャンネルを新たに立ち上げマイクラに挑戦ｗｗ</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123539.html" target="_blank" rel="noopener noreferrer">みい山作者「みい山を読んでくれた人の中に何が残ったか、それが全てです」</a><br>
+            <a href="http://burusoku-vip.com/archives/2123539.html" class="item-title" target="_blank" rel="noopener noreferrer">みい山作者「みい山を読んでくれた人の中に何が残ったか、それが全てです」</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://kasemato.net/archives/97659780.html" target="_blank" rel="noopener noreferrer">【悲報】東京埼玉、大雨雷！！！</a><br>
+            <a href="https://kasemato.net/archives/97659780.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】東京埼玉、大雨雷！！！</a>
             <span class="site-name">かせまと！</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47621731.html" target="_blank" rel="noopener noreferrer">【画像】元AKB48・小嶋陽菜さん(37)、熟れるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://orusoku.com/archives/47621731.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】元AKB48・小嶋陽菜さん(37)、熟れるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701081.html" target="_blank" rel="noopener noreferrer">【悲報】ドラゴンクエスト、生成AIを使ったサイトを公開し国内外で大炎上する</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701081.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ドラゴンクエスト、生成AIを使ったサイトを公開し国内外で大炎上する</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://shikaku2ch.doorblog.jp/archives/60011430.html" target="_blank" rel="noopener noreferrer">【悲報】日本の若者、ガチでメンタル弱くなる</a><br>
+            <a href="https://shikaku2ch.doorblog.jp/archives/60011430.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】日本の若者、ガチでメンタル弱くなる</a>
             <span class="site-name">資格ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123559.html" target="_blank" rel="noopener noreferrer">【悲報】水瀬いのりのバスツアー、参加人数が足りず一部中止wwwwww</a><br>
+            <a href="http://burusoku-vip.com/archives/2123559.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】水瀬いのりのバスツアー、参加人数が足りず一部中止wwwwww</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52307077.html" target="_blank" rel="noopener noreferrer">Amazon覚醒！「Kindle本99円セール」とかいう禁断のセールを開催してしまう</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52307077.html" class="item-title" target="_blank" rel="noopener noreferrer">Amazon覚醒！「Kindle本99円セール」とかいう禁断のセールを開催してしまう</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63429159.html" target="_blank" rel="noopener noreferrer">【衝撃】生活保護3年受けてて先月から社会復帰した結果！！！！！！！！！！</a><br>
+            <a href="http://kyousoku.net/archives/63429159.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】生活保護3年受けてて先月から社会復帰した結果！！！！！！！！！！</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066356.html" target="_blank" rel="noopener noreferrer">インドネシア、中国と防衛協力拡大「ミサイル工場を共同建設」　インドネシア外相、台湾問題に関し「中国の統一の大業を支持する」</a><br>
+            <a href="https://itainews.com/archives/2066356.html" class="item-title" target="_blank" rel="noopener noreferrer">インドネシア、中国と防衛協力拡大「ミサイル工場を共同建設」　インドネシア外相、台湾問題に関し「中国の統一の大業を支持する」</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63427709.html" target="_blank" rel="noopener noreferrer">【驚愕】ADHDさん、意気揚々と手ぶらで精神科に向かい何もできずに帰宅してしまう</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63427709.html" class="item-title" target="_blank" rel="noopener noreferrer">【驚愕】ADHDさん、意気揚々と手ぶらで精神科に向かい何もできずに帰宅してしまう</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46500383.html" target="_blank" rel="noopener noreferrer">【悲報】女の子「ちいかわのお寿司おいしい！景品ももらったよ♡」→</a><br>
+            <a href="https://toushichannel.net/archives/46500383.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】女の子「ちいかわのお寿司おいしい！景品ももらったよ♡」→</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://nwknews.jp/archives/6254371.html" target="_blank" rel="noopener noreferrer">【議論】“托卵訴訟”で元妻に330万円の賠償判決「出生時のDNA鑑定を義務化すべきだ」←みんなはどう思う？</a><br>
+            <a href="https://nwknews.jp/archives/6254371.html" class="item-title" target="_blank" rel="noopener noreferrer">【議論】“托卵訴訟”で元妻に330万円の賠償判決「出生時のDNA鑑定を義務化すべきだ」←みんなはどう思う？</a>
             <span class="site-name">哲学ニュースnwk</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700827.html" target="_blank" rel="noopener noreferrer">【衝撃朗報】蚊、絶滅wwwwwwwwwww</a><br>
+            <a href="http://chaos2ch.com/archives/5700827.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃朗報】蚊、絶滅wwwwwwwwwww</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587913.html" target="_blank" rel="noopener noreferrer">【画像】警察・警備会社向け装備品の『SYCO』、対クマ用ガチ防護服を開発ｗ</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587913.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】警察・警備会社向け装備品の『SYCO』、対クマ用ガチ防護服を開発ｗ</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101310.html" target="_blank" rel="noopener noreferrer">【悲報】関東の大雨、ヤバい模様</a><br>
+            <a href="https://alfalfalfa.com/articles/11101310.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】関東の大雨、ヤバい模様</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701108.html" target="_blank" rel="noopener noreferrer">【衝撃】東京、豪雨wwwww</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701108.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】東京、豪雨wwwww</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31465218.html" target="_blank" rel="noopener noreferrer">【画像】イッヌさんが並んで寝てる姿、可愛すぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31465218.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】イッヌさんが並んで寝てる姿、可愛すぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63429532.html" target="_blank" rel="noopener noreferrer">【朗報】ディズニーランド、千葉豪雨に「1000万円」寄付</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63429532.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】ディズニーランド、千葉豪雨に「1000万円」寄付</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52307074.html" target="_blank" rel="noopener noreferrer">【朗報】駐輪場の自転車を正しく停め直して写真を送るだけの「ポイ活アプリ」が誕生</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52307074.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】駐輪場の自転車を正しく停め直して写真を送るだけの「ポイ活アプリ」が誕生</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="https://shikaku2ch.doorblog.jp/archives/60011383.html" target="_blank" rel="noopener noreferrer">【悲報】東京埼玉、水没！</a><br>
+            <a href="https://shikaku2ch.doorblog.jp/archives/60011383.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】東京埼玉、水没！</a>
             <span class="site-name">資格ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587919.html" target="_blank" rel="noopener noreferrer">1億2千万でFIREした43歳独身男性、誰とも喋らない圧倒的孤独生活で狂ってしまう…</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587919.html" class="item-title" target="_blank" rel="noopener noreferrer">1億2千万でFIREした43歳独身男性、誰とも喋らない圧倒的孤独生活で狂ってしまう…</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="https://kasemato.net/archives/97659598.html" target="_blank" rel="noopener noreferrer">【朗報】セミファイナルの見分け方が判明！！！！！！！！！</a><br>
+            <a href="https://kasemato.net/archives/97659598.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】セミファイナルの見分け方が判明！！！！！！！！！</a>
             <span class="site-name">かせまと！</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701058.html" target="_blank" rel="noopener noreferrer">【悲報】日本社会、「夫を傷つけるエンタメ」が充実しすぎている模様ｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701058.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】日本社会、「夫を傷つけるエンタメ」が充実しすぎている模様ｗｗｗ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47621723.html" target="_blank" rel="noopener noreferrer">【画像】ロピアとかいう「食わせる」スーパーマーケッツ、ヤバいｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://orusoku.com/archives/47621723.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】ロピアとかいう「食わせる」スーパーマーケッツ、ヤバいｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63429467.html" target="_blank" rel="noopener noreferrer">【朗報】Amazonマンガ週末セール、今週は次世代作家マンガ特集。雷雷雷など大人気マンガも対象</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63429467.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】Amazonマンガ週末セール、今週は次世代作家マンガ特集。雷雷雷など大人気マンガも対象</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123558.html" target="_blank" rel="noopener noreferrer">『独身男』だけで4人くらいで共同生活したら楽しそうじゃね？</a><br>
+            <a href="http://burusoku-vip.com/archives/2123558.html" class="item-title" target="_blank" rel="noopener noreferrer">『独身男』だけで4人くらいで共同生活したら楽しそうじゃね？</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101299.html" target="_blank" rel="noopener noreferrer">ナダル、妻が交際時に年齢を13歳サバ読み　27歳としていたが実際は40歳　真相判明の瞬間を階層</a><br>
+            <a href="https://alfalfalfa.com/articles/11101299.html" class="item-title" target="_blank" rel="noopener noreferrer">ナダル、妻が交際時に年齢を13歳サバ読み　27歳としていたが実際は40歳　真相判明の瞬間を階層</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://ryusoku.com/archives/5701097.html" target="_blank" rel="noopener noreferrer">国鳥の雉（キジ）かわいいｗｗｗ（※画像あり）</a><br>
+            <a href="http://ryusoku.com/archives/5701097.html" class="item-title" target="_blank" rel="noopener noreferrer">国鳥の雉（キジ）かわいいｗｗｗ（※画像あり）</a>
             <span class="site-name">流速VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066355.html" target="_blank" rel="noopener noreferrer">【東武鉄道事故】複数社で作業、連携不備か</a><br>
+            <a href="https://itainews.com/archives/2066355.html" class="item-title" target="_blank" rel="noopener noreferrer">【東武鉄道事故】複数社で作業、連携不備か</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="https://kasemato.net/archives/97659474.html" target="_blank" rel="noopener noreferrer">若者「テレビ見ない（キリッ）」←コイツら</a><br>
+            <a href="https://kasemato.net/archives/97659474.html" class="item-title" target="_blank" rel="noopener noreferrer">若者「テレビ見ない（キリッ）」←コイツら</a>
             <span class="site-name">かせまと！</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700828.html" target="_blank" rel="noopener noreferrer">ワイ（165cm）「ワイに気にせずヒール履いてええんやで」元カノ（162cm）「気を使わせてごめんね…」→別れる時、とんでもないこと言われた</a><br>
+            <a href="http://chaos2ch.com/archives/5700828.html" class="item-title" target="_blank" rel="noopener noreferrer">ワイ（165cm）「ワイに気にせずヒール履いてええんやで」元カノ（162cm）「気を使わせてごめんね…」→別れる時、とんでもないこと言われた</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46499787.html" target="_blank" rel="noopener noreferrer">【悲報】カレーハウスCoCo壱番屋さん、他が「値上がり」しまくったせいで相対的にそんな高くもなくなる</a><br>
+            <a href="https://toushichannel.net/archives/46499787.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】カレーハウスCoCo壱番屋さん、他が「値上がり」しまくったせいで相対的にそんな高くもなくなる</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587918.html" target="_blank" rel="noopener noreferrer">【画像】極楽とんぼ山本のYouTubeチャンネル、いつの間にか大人気チャンネルになってたｗ</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587918.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】極楽とんぼ山本のYouTubeチャンネル、いつの間にか大人気チャンネルになってたｗ</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52307071.html" target="_blank" rel="noopener noreferrer">『映画ちいかわ』興行収入100億円を突破！</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52307071.html" class="item-title" target="_blank" rel="noopener noreferrer">『映画ちいかわ』興行収入100億円を突破！</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31465207.html" target="_blank" rel="noopener noreferrer">【画像】36歳こどおじワイの晩ごはん（1,525円）、スゴいｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31465207.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】36歳こどおじワイの晩ごはん（1,525円）、スゴいｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63428961.html" target="_blank" rel="noopener noreferrer">レスバワイ「日本車って別にすごくないやろ」</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63428961.html" class="item-title" target="_blank" rel="noopener noreferrer">レスバワイ「日本車って別にすごくないやろ」</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701067.html" target="_blank" rel="noopener noreferrer">【動画】お前らっぽい男、痴漢で捕まって泣き叫ぶｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701067.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】お前らっぽい男、痴漢で捕まって泣き叫ぶｗｗｗ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587917.html" target="_blank" rel="noopener noreferrer">【画像】おじさんキッズコーデ、ガチでヤバいｗｗｗｗｗ</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587917.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】おじさんキッズコーデ、ガチでヤバいｗｗｗｗｗ</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101293.html" target="_blank" rel="noopener noreferrer">【悲報】智辯和歌山野球部、上下関係が厳し過ぎて炎上wwwwwwww</a><br>
+            <a href="https://alfalfalfa.com/articles/11101293.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】智辯和歌山野球部、上下関係が厳し過ぎて炎上wwwwwwww</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101173.html" target="_blank" rel="noopener noreferrer">【動画】ぶりっ子すぎるアイドル、スゴすぎる…【Pickup22061631】</a><br>
+            <a href="https://alfalfalfa.com/articles/11101173.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】ぶりっ子すぎるアイドル、スゴすぎる…【Pickup22061631】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123556.html" target="_blank" rel="noopener noreferrer">こどおじ「貯金700万？少な...社会人で30超えてるなら最低1000万はあるだろｗｗｗｗ」</a><br>
+            <a href="http://burusoku-vip.com/archives/2123556.html" class="item-title" target="_blank" rel="noopener noreferrer">こどおじ「貯金700万？少な...社会人で30超えてるなら最低1000万はあるだろｗｗｗｗ」</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63427620.html" target="_blank" rel="noopener noreferrer">【画像】コンビニ・スーパー「物価が高すぎて”これ”が売れまくってる」</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63427620.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】コンビニ・スーパー「物価が高すぎて”これ”が売れまくってる」</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066351.html" target="_blank" rel="noopener noreferrer">法務省、大人気ヤンキー恋愛リアリティー番組ラヴ上等とのタイアップポスターを批判受け取りやめ</a><br>
+            <a href="https://itainews.com/archives/2066351.html" class="item-title" target="_blank" rel="noopener noreferrer">法務省、大人気ヤンキー恋愛リアリティー番組ラヴ上等とのタイアップポスターを批判受け取りやめ</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587916.html" target="_blank" rel="noopener noreferrer">【画像】セガの名作「ゴールデンアックス」がアニメ化トレーラー公開ｗｗｗ</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587916.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】セガの名作「ゴールデンアックス」がアニメ化トレーラー公開ｗｗｗ</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="https://nwknews.jp/archives/6254365.html" target="_blank" rel="noopener noreferrer">【悲報】うつ病、想像してるより遥かにヤバい…「甘え」では片付けられない現実</a><br>
+            <a href="https://nwknews.jp/archives/6254365.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】うつ病、想像してるより遥かにヤバい…「甘え」では片付けられない現実</a>
             <span class="site-name">哲学ニュースnwk</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701066.html" target="_blank" rel="noopener noreferrer">女性「女さん、まんさん、メスガキ、ガイジ……このあたりの言葉を使う奴とは絶縁します」　→　衝撃の展開</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701066.html" class="item-title" target="_blank" rel="noopener noreferrer">女性「女さん、まんさん、メスガキ、ガイジ……このあたりの言葉を使う奴とは絶縁します」　→　衝撃の展開</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52306858.html" target="_blank" rel="noopener noreferrer">【ラブ上等】エンタメとして不良起用するっていろいろ難しいよね</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52306858.html" class="item-title" target="_blank" rel="noopener noreferrer">【ラブ上等】エンタメとして不良起用するっていろいろ難しいよね</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46499782.html" target="_blank" rel="noopener noreferrer">【正論】ピザ配達員「台風の日に注文してくる人はどうかしてる」</a><br>
+            <a href="https://toushichannel.net/archives/46499782.html" class="item-title" target="_blank" rel="noopener noreferrer">【正論】ピザ配達員「台風の日に注文してくる人はどうかしてる」</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700829.html" target="_blank" rel="noopener noreferrer">人生で「早めに気づかないとガチで後悔すること」教えて</a><br>
+            <a href="http://chaos2ch.com/archives/5700829.html" class="item-title" target="_blank" rel="noopener noreferrer">人生で「早めに気づかないとガチで後悔すること」教えて</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601315.html" target="_blank" rel="noopener noreferrer">カード屋、加工された高額カードを見抜けずに買い取ってしまい大恥</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601315.html" class="item-title" target="_blank" rel="noopener noreferrer">カード屋、加工された高額カードを見抜けずに買い取ってしまい大恥</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63429330.html" target="_blank" rel="noopener noreferrer">【悲報】中国ネット「なぜ日本のネットユーザーは中国を『父』と呼ぶのか？分析してみた」</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63429330.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】中国ネット「なぜ日本のネットユーザーは中国を『父』と呼ぶのか？分析してみた」</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101289.html" target="_blank" rel="noopener noreferrer">【悲報】室内で帽子を被ってるだけのおっさん、なぜかXで叩かれるwwwwwwwwwwwwwwwwwww</a><br>
+            <a href="https://alfalfalfa.com/articles/11101289.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】室内で帽子を被ってるだけのおっさん、なぜかXで叩かれるwwwwwwwwwwwwwwwwwww</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://kasemato.net/archives/97659222.html" target="_blank" rel="noopener noreferrer">高市氏、SNSにて死生観を語る　フレンドリーさアピールも賛否が出るリスク</a><br>
+            <a href="https://kasemato.net/archives/97659222.html" class="item-title" target="_blank" rel="noopener noreferrer">高市氏、SNSにて死生観を語る　フレンドリーさアピールも賛否が出るリスク</a>
             <span class="site-name">かせまと！</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587915.html" target="_blank" rel="noopener noreferrer">「芸能事務所」、オワコンに　倒産が過去最多・・・</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587915.html" class="item-title" target="_blank" rel="noopener noreferrer">「芸能事務所」、オワコンに　倒産が過去最多・・・</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066346.html" target="_blank" rel="noopener noreferrer">“父親は自分じゃない…”DNA鑑定で発覚 父親の男性が元妻に損害賠償求めた裁判で賠償命じる判決</a><br>
+            <a href="https://itainews.com/archives/2066346.html" class="item-title" target="_blank" rel="noopener noreferrer">“父親は自分じゃない…”DNA鑑定で発覚 父親の男性が元妻に損害賠償求めた裁判で賠償命じる判決</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701059.html" target="_blank" rel="noopener noreferrer">【悲報】生搾りオレンジジュース自販機『アイジュース』、終わる………………</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701059.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】生搾りオレンジジュース自販機『アイジュース』、終わる………………</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://kasemato.net/archives/97659147.html" target="_blank" rel="noopener noreferrer">【動画】X民「ベッセントの債券利回り抑制対応、こんな感じ」→</a><br>
+            <a href="https://kasemato.net/archives/97659147.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】X民「ベッセントの債券利回り抑制対応、こんな感じ」→</a>
             <span class="site-name">かせまと！</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52307067.html" target="_blank" rel="noopener noreferrer">ミ二ップ以外のコンビニでもソフトクリーム食えればいいのになぁ</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52307067.html" class="item-title" target="_blank" rel="noopener noreferrer">ミ二ップ以外のコンビニでもソフトクリーム食えればいいのになぁ</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63428899.html" target="_blank" rel="noopener noreferrer">10万円くらいする炊飯器ってそんなに美味しく炊けるんか？</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63428899.html" class="item-title" target="_blank" rel="noopener noreferrer">10万円くらいする炊飯器ってそんなに美味しく炊けるんか？</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123555.html" target="_blank" rel="noopener noreferrer">【画像】独身男性、気づく『結婚は人生の墓場じゃなかった』</a><br>
+            <a href="http://burusoku-vip.com/archives/2123555.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】独身男性、気づく『結婚は人生の墓場じゃなかった』</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63429156.html" target="_blank" rel="noopener noreferrer">【悲報】低身長ワイ、『シークレットシューズ』を履いて出社した結果・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63429156.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】低身長ワイ、『シークレットシューズ』を履いて出社した結果・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://ryusoku.com/archives/5701080.html" target="_blank" rel="noopener noreferrer">親が喧嘩してて辛い・・・（※画像あり）</a><br>
+            <a href="http://ryusoku.com/archives/5701080.html" class="item-title" target="_blank" rel="noopener noreferrer">親が喧嘩してて辛い・・・（※画像あり）</a>
             <span class="site-name">流速VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://shikaku2ch.doorblog.jp/archives/60011211.html" target="_blank" rel="noopener noreferrer">“父親は自分じゃない…”DNA鑑定で発覚「それでも愛情をもって育てる」父親の男性が元妻に損害賠償求めた裁判で賠償命じる判決</a><br>
+            <a href="https://shikaku2ch.doorblog.jp/archives/60011211.html" class="item-title" target="_blank" rel="noopener noreferrer">“父親は自分じゃない…”DNA鑑定で発覚「それでも愛情をもって育てる」父親の男性が元妻に損害賠償求めた裁判で賠償命じる判決</a>
             <span class="site-name">資格ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587914.html" target="_blank" rel="noopener noreferrer">【画像】サモ・ハンとジャッキー・チェンとユン・ピョウが久しぶりの3ショット　80年代香港映画は良かったな…</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587914.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】サモ・ハンとジャッキー・チェンとユン・ピョウが久しぶりの3ショット　80年代香港映画は良かったな…</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101283.html" target="_blank" rel="noopener noreferrer">【動画】篠田麻里子が不倫バレた時の音声、今見ても酷い</a><br>
+            <a href="https://alfalfalfa.com/articles/11101283.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】篠田麻里子が不倫バレた時の音声、今見ても酷い</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46499727.html" target="_blank" rel="noopener noreferrer">【画像あり】港区女子、ショートスリーパー説ｗｗｗｗｗ</a><br>
+            <a href="https://toushichannel.net/archives/46499727.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像あり】港区女子、ショートスリーパー説ｗｗｗｗｗ</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066347.html" target="_blank" rel="noopener noreferrer">【悲報】ママさん「いやあああああ！！保育園にタイミーさんがいる！！ 男の保育士よおおおお！」</a><br>
+            <a href="https://itainews.com/archives/2066347.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ママさん「いやあああああ！！保育園にタイミーさんがいる！！ 男の保育士よおおおお！」</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700830.html" target="_blank" rel="noopener noreferrer">寿司屋のガリとかいう誰も食わないのに置いてあるゴミ</a><br>
+            <a href="http://chaos2ch.com/archives/5700830.html" class="item-title" target="_blank" rel="noopener noreferrer">寿司屋のガリとかいう誰も食わないのに置いてあるゴミ</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701043.html" target="_blank" rel="noopener noreferrer">琵琶湖三市同時花火大会の主催者「返金することを検討する！」</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701043.html" class="item-title" target="_blank" rel="noopener noreferrer">琵琶湖三市同時花火大会の主催者「返金することを検討する！」</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://nwknews.jp/archives/6254361.html" target="_blank" rel="noopener noreferrer">好きな作品のラスト、オチを容赦なくネタバレするスレ</a><br>
+            <a href="https://nwknews.jp/archives/6254361.html" class="item-title" target="_blank" rel="noopener noreferrer">好きな作品のラスト、オチを容赦なくネタバレするスレ</a>
             <span class="site-name">哲学ニュースnwk</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066350.html" target="_blank" rel="noopener noreferrer">日本人インフルエンサー、韓国アイドルの真似をしながら「つり目ポーズ」…人種差別で物議</a><br>
+            <a href="https://itainews.com/archives/2066350.html" class="item-title" target="_blank" rel="noopener noreferrer">日本人インフルエンサー、韓国アイドルの真似をしながら「つり目ポーズ」…人種差別で物議</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587911.html" target="_blank" rel="noopener noreferrer">生搾りオレンジジュース自販機「IJOOZ」東海・広島・九州でサービス終了へ・・・</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587911.html" class="item-title" target="_blank" rel="noopener noreferrer">生搾りオレンジジュース自販機「IJOOZ」東海・広島・九州でサービス終了へ・・・</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11099998.html" target="_blank" rel="noopener noreferrer">【謎】渋滞中の高速道路で車線変更しまくるヤツって何なんや？ｗｗｗｗ</a><br>
+            <a href="https://alfalfalfa.com/articles/11099998.html" class="item-title" target="_blank" rel="noopener noreferrer">【謎】渋滞中の高速道路で車線変更しまくるヤツって何なんや？ｗｗｗｗ</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101174.html" target="_blank" rel="noopener noreferrer">【動画】のんさん(32)、めちゃめちゃかわいい【Pickup22061633】</a><br>
+            <a href="https://alfalfalfa.com/articles/11101174.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】のんさん(32)、めちゃめちゃかわいい【Pickup22061633】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://kasemato.net/archives/97658910.html" target="_blank" rel="noopener noreferrer">【悲報】原油在庫、やばすぎて草ｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://kasemato.net/archives/97658910.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】原油在庫、やばすぎて草ｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">かせまと！</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63428839.html" target="_blank" rel="noopener noreferrer">コンビニでおにぎりってマジで買わなくなったよな</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63428839.html" class="item-title" target="_blank" rel="noopener noreferrer">コンビニでおにぎりってマジで買わなくなったよな</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123553.html" target="_blank" rel="noopener noreferrer">【画像】劇場版まどマギ、4500円のポップコーンがこちらwwwwwww</a><br>
+            <a href="http://burusoku-vip.com/archives/2123553.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】劇場版まどマギ、4500円のポップコーンがこちらwwwwwww</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63427615.html" target="_blank" rel="noopener noreferrer">【速報】エルニーニョ現象さん、2026年後半に『歴史的な強さ』になる模様…</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63427615.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】エルニーニョ現象さん、2026年後半に『歴史的な強さ』になる模様…</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066344.html" target="_blank" rel="noopener noreferrer">【プロ野球】西武、稲尾和久さんの永久欠番「24」をイベントでゲストのアイドルグループ「ME：I」が着用　SNSで賛否</a><br>
+            <a href="https://itainews.com/archives/2066344.html" class="item-title" target="_blank" rel="noopener noreferrer">【プロ野球】西武、稲尾和久さんの永久欠番「24」をイベントでゲストのアイドルグループ「ME：I」が着用　SNSで賛否</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="https://kasemato.net/archives/97658867.html" target="_blank" rel="noopener noreferrer">日本の労働者たち、高市政権の「労働時間規制緩和」に大喜びｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://kasemato.net/archives/97658867.html" class="item-title" target="_blank" rel="noopener noreferrer">日本の労働者たち、高市政権の「労働時間規制緩和」に大喜びｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">かせまと！</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701030.html" target="_blank" rel="noopener noreferrer">【悲報】消防庁のポスター、生成AIポン出しと思われ叩かれる</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701030.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】消防庁のポスター、生成AIポン出しと思われ叩かれる</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587908.html" target="_blank" rel="noopener noreferrer">あり得ないと世間から批判された富士山7歳置き去り父親。上の子が勝手に登ってしまい仕方なくだった！</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587908.html" class="item-title" target="_blank" rel="noopener noreferrer">あり得ないと世間から批判された富士山7歳置き去り父親。上の子が勝手に登ってしまい仕方なくだった！</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700831.html" target="_blank" rel="noopener noreferrer">腐女子「逆カプは地雷なのでブロックします」「逆カプ◆す」←これ</a><br>
+            <a href="http://chaos2ch.com/archives/5700831.html" class="item-title" target="_blank" rel="noopener noreferrer">腐女子「逆カプは地雷なのでブロックします」「逆カプ◆す」←これ</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101260.html" target="_blank" rel="noopener noreferrer">【悲報】四千頭身の都築メンバー、あの感じで港区男子だった模様</a><br>
+            <a href="https://alfalfalfa.com/articles/11101260.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】四千頭身の都築メンバー、あの感じで港区男子だった模様</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52307063.html" target="_blank" rel="noopener noreferrer">公園で女児にわいせつ行為→指摘した男児を殴ったか　86歳男逮捕</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52307063.html" class="item-title" target="_blank" rel="noopener noreferrer">公園で女児にわいせつ行為→指摘した男児を殴ったか　86歳男逮捕</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066342.html" target="_blank" rel="noopener noreferrer">ベトナム政府「海外不法滞在の罰則を強化する！→日本の入管へぞろぞろと出頭ｗ</a><br>
+            <a href="https://itainews.com/archives/2066342.html" class="item-title" target="_blank" rel="noopener noreferrer">ベトナム政府「海外不法滞在の罰則を強化する！→日本の入管へぞろぞろと出頭ｗ</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701053.html" target="_blank" rel="noopener noreferrer">【悲報】親公認でJKと付き合いS●Xしまくっていた教師、ガチの『嫉妬』で職を失うwwwwwwwwwwwwwww</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701053.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】親公認でJKと付き合いS●Xしまくっていた教師、ガチの『嫉妬』で職を失うwwwwwwwwwwwwwww</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587907.html" target="_blank" rel="noopener noreferrer">“父親は自分じゃない…”DNA鑑定で発覚 父親の男性が元妻に損害賠償求めた裁判で賠償命じる判決</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587907.html" class="item-title" target="_blank" rel="noopener noreferrer">“父親は自分じゃない…”DNA鑑定で発覚 父親の男性が元妻に損害賠償求めた裁判で賠償命じる判決</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123538.html" target="_blank" rel="noopener noreferrer">【悲報】カレーハウスCoCo壱番屋さん、他か値上がりしまくったせいで相対的にそんな高くもなくなるｗｗｗ</a><br>
+            <a href="http://burusoku-vip.com/archives/2123538.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】カレーハウスCoCo壱番屋さん、他か値上がりしまくったせいで相対的にそんな高くもなくなるｗｗｗ</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://kasemato.net/archives/97658706.html" target="_blank" rel="noopener noreferrer">【速報】アメリカ「カナダは50%関税を回避できる貿易協定を拒否した」</a><br>
+            <a href="https://kasemato.net/archives/97658706.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】アメリカ「カナダは50%関税を回避できる貿易協定を拒否した」</a>
             <span class="site-name">かせまと！</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47621712.html" target="_blank" rel="noopener noreferrer">【画像】めちゃくちゃ美味しそうな餃子、見つかるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://orusoku.com/archives/47621712.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】めちゃくちゃ美味しそうな餃子、見つかるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63429102.html" target="_blank" rel="noopener noreferrer">【朗報】中国の人形ロボット、人間を超える</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63429102.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】中国の人形ロボット、人間を超える</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123550.html" target="_blank" rel="noopener noreferrer">【画像】おじさんキッズコーデ、ガチでバカにされていた</a><br>
+            <a href="http://burusoku-vip.com/archives/2123550.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】おじさんキッズコーデ、ガチでバカにされていた</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701040.html" target="_blank" rel="noopener noreferrer">黒人「アメリカ黒人初音ミク描いたよー」　1.9万いいね</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701040.html" class="item-title" target="_blank" rel="noopener noreferrer">黒人「アメリカ黒人初音ミク描いたよー」　1.9万いいね</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://shikaku2ch.doorblog.jp/archives/60011064.html" target="_blank" rel="noopener noreferrer">国産米、いよいよ5Kgが2000円程度にまで下がるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://shikaku2ch.doorblog.jp/archives/60011064.html" class="item-title" target="_blank" rel="noopener noreferrer">国産米、いよいよ5Kgが2000円程度にまで下がるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">資格ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066339.html" target="_blank" rel="noopener noreferrer">男性迷惑系配信者「平将門塚」で石碑をよじ登り奇声、厳しい声が噴出「罰当たりすぎる」「知性も教養もない」</a><br>
+            <a href="https://itainews.com/archives/2066339.html" class="item-title" target="_blank" rel="noopener noreferrer">男性迷惑系配信者「平将門塚」で石碑をよじ登り奇声、厳しい声が噴出「罰当たりすぎる」「知性も教養もない」</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587905.html" target="_blank" rel="noopener noreferrer">【画像】新型パジェロがこういうのでいいんだよを発表ｗｗｗ</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587905.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】新型パジェロがこういうのでいいんだよを発表ｗｗｗ</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101218.html" target="_blank" rel="noopener noreferrer">【悲報】カードショップ、高額カードの“加工”を見抜けず買い取り→後から発覚して大騒ぎにｗｗｗｗｗｗ</a><br>
+            <a href="https://alfalfalfa.com/articles/11101218.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】カードショップ、高額カードの“加工”を見抜けず買い取り→後から発覚して大騒ぎにｗｗｗｗｗｗ</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46499151.html" target="_blank" rel="noopener noreferrer">スーパーの入り口で「貴金属の買い取り」←すごい下品じゃね？</a><br>
+            <a href="https://toushichannel.net/archives/46499151.html" class="item-title" target="_blank" rel="noopener noreferrer">スーパーの入り口で「貴金属の買い取り」←すごい下品じゃね？</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700832.html" target="_blank" rel="noopener noreferrer">【絶望】馬鹿ワイ　女にイキった結果逝くwwwww</a><br>
+            <a href="http://chaos2ch.com/archives/5700832.html" class="item-title" target="_blank" rel="noopener noreferrer">【絶望】馬鹿ワイ　女にイキった結果逝くwwwww</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52307065.html" target="_blank" rel="noopener noreferrer">【悲報】アスラン、例の件でシンを詰める</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52307065.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】アスラン、例の件でシンを詰める</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587748.html" target="_blank" rel="noopener noreferrer">【悲報】あのちゃん「主食はお菓子」医者「あなたヤバいわよ」</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587748.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】あのちゃん「主食はお菓子」医者「あなたヤバいわよ」</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="https://kasemato.net/archives/97658622.html" target="_blank" rel="noopener noreferrer">【動画】オンラインUFOキャッチャーのアシスト機能　一線を越えてて草ｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://kasemato.net/archives/97658622.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】オンラインUFOキャッチャーのアシスト機能　一線を越えてて草ｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">かせまと！</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701038.html" target="_blank" rel="noopener noreferrer">【悲報】JKミスコン群馬代表ちゃん、未成年飲酒が疑われる内容がリークされてしまう</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701038.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】JKミスコン群馬代表ちゃん、未成年飲酒が疑われる内容がリークされてしまう</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://nwknews.jp/archives/6254348.html" target="_blank" rel="noopener noreferrer">【物理】電車内でラジコンヘリを浮かせたまま発車したら、ヘリは後ろに吹っ飛ぶの？それともその場に浮き続けるの？</a><br>
+            <a href="https://nwknews.jp/archives/6254348.html" class="item-title" target="_blank" rel="noopener noreferrer">【物理】電車内でラジコンヘリを浮かせたまま発車したら、ヘリは後ろに吹っ飛ぶの？それともその場に浮き続けるの？</a>
             <span class="site-name">哲学ニュースnwk</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066337.html" target="_blank" rel="noopener noreferrer">「絶対ショートスリーパーを目指すのはやめとけ」睡眠専門医が堀大輔氏の「1日30分睡眠」を「取り返しがつかない健康リスク」</a><br>
+            <a href="https://itainews.com/archives/2066337.html" class="item-title" target="_blank" rel="noopener noreferrer">「絶対ショートスリーパーを目指すのはやめとけ」睡眠専門医が堀大輔氏の「1日30分睡眠」を「取り返しがつかない健康リスク」</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587903.html" target="_blank" rel="noopener noreferrer">ママさん「いやあああああ！！保育園にタイミーさんがいる！！ 男の保育士よおおおお！」</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587903.html" class="item-title" target="_blank" rel="noopener noreferrer">ママさん「いやあああああ！！保育園にタイミーさんがいる！！ 男の保育士よおおおお！」</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101208.html" target="_blank" rel="noopener noreferrer">【物議】投資家「高市政権は大衆人気で持っているだけ、知識層からの評価は極端に低い」→ネットで賛否</a><br>
+            <a href="https://alfalfalfa.com/articles/11101208.html" class="item-title" target="_blank" rel="noopener noreferrer">【物議】投資家「高市政権は大衆人気で持っているだけ、知識層からの評価は極端に低い」→ネットで賛否</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101175.html" target="_blank" rel="noopener noreferrer">【画像】ロシアのモデル、太ももがあまりにも太すぎるwww【Pickup22061636】</a><br>
+            <a href="https://alfalfalfa.com/articles/11101175.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】ロシアのモデル、太ももがあまりにも太すぎるwww【Pickup22061636】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701036.html" target="_blank" rel="noopener noreferrer">【画像】ワイの乳首見たい人だけスレ開け</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701036.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】ワイの乳首見たい人だけスレ開け</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://kasemato.net/archives/97658499.html" target="_blank" rel="noopener noreferrer">Amazon覚醒！「Kindle本99円セール」とかいう禁断のセールを開催してしまう【📦】</a><br>
+            <a href="https://kasemato.net/archives/97658499.html" class="item-title" target="_blank" rel="noopener noreferrer">Amazon覚醒！「Kindle本99円セール」とかいう禁断のセールを開催してしまう【📦】</a>
             <span class="site-name">かせまと！</span>
         </div>
     
         <div class="item">
-            <a href="https://news4vip.livedoor.biz/archives/52587747.html" target="_blank" rel="noopener noreferrer">【悲報】フランスパリのご機嫌な朝食（3000円）がこちらwwwwwwwww</a><br>
+            <a href="https://news4vip.livedoor.biz/archives/52587747.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】フランスパリのご機嫌な朝食（3000円）がこちらwwwwwwwww</a>
             <span class="site-name">【2ch】ニュー速クオリティ</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47621707.html" target="_blank" rel="noopener noreferrer">【画像】安心系JK、やっぱり安心するｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://orusoku.com/archives/47621707.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】安心系JK、やっぱり安心するｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52307062.html" target="_blank" rel="noopener noreferrer">知人の男性に劇物入りマフィン食べさせる　殺人未遂容疑で46歳女逮捕</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52307062.html" class="item-title" target="_blank" rel="noopener noreferrer">知人の男性に劇物入りマフィン食べさせる　殺人未遂容疑で46歳女逮捕</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63428791.html" target="_blank" rel="noopener noreferrer">ぶっちゃけ少子化問題って政治とか経済だけの問題じゃないよな</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63428791.html" class="item-title" target="_blank" rel="noopener noreferrer">ぶっちゃけ少子化問題って政治とか経済だけの問題じゃないよな</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123505.html" target="_blank" rel="noopener noreferrer">爆笑問題・田中『M-1に青春をかけるみたいなの気持ち悪い』←は？</a><br>
+            <a href="http://burusoku-vip.com/archives/2123505.html" class="item-title" target="_blank" rel="noopener noreferrer">爆笑問題・田中『M-1に青春をかけるみたいなの気持ち悪い』←は？</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63429152.html" target="_blank" rel="noopener noreferrer">【悲報】身長180cm～183cmの男、もはや無条件でモテてしまう　←　これ</a><br>
+            <a href="http://kyousoku.net/archives/63429152.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】身長180cm～183cmの男、もはや無条件でモテてしまう　←　これ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://shikaku2ch.doorblog.jp/archives/60011004.html" target="_blank" rel="noopener noreferrer">【速報】カード屋、加工された高額カードを見抜けずに買い取ってしまい大恥ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://shikaku2ch.doorblog.jp/archives/60011004.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】カード屋、加工された高額カードを見抜けずに買い取ってしまい大恥ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">資格ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://ryusoku.com/archives/5701045.html" target="_blank" rel="noopener noreferrer">「本能寺の変」ってミッチーがノリでやっちゃったみたいな感じで決まりだけど・・・</a><br>
+            <a href="http://ryusoku.com/archives/5701045.html" class="item-title" target="_blank" rel="noopener noreferrer">「本能寺の変」ってミッチーがノリでやっちゃったみたいな感じで決まりだけど・・・</a>
             <span class="site-name">流速VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066335.html" target="_blank" rel="noopener noreferrer">甲子園出場で紛糾 秋田代表横手高校は進学校なのか論争 卒業生「東京と秋田では進学事情が違いすぎる」</a><br>
+            <a href="https://itainews.com/archives/2066335.html" class="item-title" target="_blank" rel="noopener noreferrer">甲子園出場で紛糾 秋田代表横手高校は進学校なのか論争 卒業生「東京と秋田では進学事情が違いすぎる」</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63427602.html" target="_blank" rel="noopener noreferrer">【速報】脳外科医竹田くんのモデルさんのせいで赤穂市職員130人がクビに</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63427602.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】脳外科医竹田くんのモデルさんのせいで赤穂市職員130人がクビに</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101121.html" target="_blank" rel="noopener noreferrer">【ドン！】ワンピース原作者・尾田栄一郎51歳「リセマラ？やりません。ガチャ回し放題！それが漫画家です！！」</a><br>
+            <a href="https://alfalfalfa.com/articles/11101121.html" class="item-title" target="_blank" rel="noopener noreferrer">【ドン！】ワンピース原作者・尾田栄一郎51歳「リセマラ？やりません。ガチャ回し放題！それが漫画家です！！」</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46499150.html" target="_blank" rel="noopener noreferrer">【画像あり】スマホ代「250円」なの最高すぎｗｗｗｗｗ</a><br>
+            <a href="https://toushichannel.net/archives/46499150.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像あり】スマホ代「250円」なの最高すぎｗｗｗｗｗ</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5701035.html" target="_blank" rel="noopener noreferrer">【画像】爆乳おばさんアナウンサー(極)、今度は腋を武器にし始める</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5701035.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】爆乳おばさんアナウンサー(極)、今度は腋を武器にし始める</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700833.html" target="_blank" rel="noopener noreferrer">【絶望画像】被害者女さん、将棋でえげつないセクハラをしてきた男性を退場させてしまう</a><br>
+            <a href="http://chaos2ch.com/archives/5700833.html" class="item-title" target="_blank" rel="noopener noreferrer">【絶望画像】被害者女さん、将棋でえげつないセクハラをしてきた男性を退場させてしまう</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31465206.html" target="_blank" rel="noopener noreferrer">【画像】BLEACH作者・久保帯人、Twitterでブチ切れｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31465206.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】BLEACH作者・久保帯人、Twitterでブチ切れｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066334.html" target="_blank" rel="noopener noreferrer">「芸能事務所」、オワコンに　倒産が過去最多</a><br>
+            <a href="https://itainews.com/archives/2066334.html" class="item-title" target="_blank" rel="noopener noreferrer">「芸能事務所」、オワコンに　倒産が過去最多</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101191.html" target="_blank" rel="noopener noreferrer">【闇深】ミスコン開幕直後、出場者の“友人”が暴露垢に晒しを依頼か…フレネミーすぎるだろｗｗｗｗｗｗ</a><br>
+            <a href="https://alfalfalfa.com/articles/11101191.html" class="item-title" target="_blank" rel="noopener noreferrer">【闇深】ミスコン開幕直後、出場者の“友人”が暴露垢に晒しを依頼か…フレネミーすぎるだろｗｗｗｗｗｗ</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700887.html" target="_blank" rel="noopener noreferrer">【画像】「求める年収は5000万円」で炎上したKカップ女さん、条件満たす男性からオファー殺到ｗｗｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700887.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】「求める年収は5000万円」で炎上したKカップ女さん、条件満たす男性からオファー殺到ｗｗｗｗｗ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://nwknews.jp/archives/6254336.html" target="_blank" rel="noopener noreferrer">【悲報】カード屋さん、精巧に加工された高額「ひかるリザードン」を見抜けず買取→ミリ単位でカットされていたことが発覚ｗｗｗｗｗｗ</a><br>
+            <a href="https://nwknews.jp/archives/6254336.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】カード屋さん、精巧に加工された高額「ひかるリザードン」を見抜けず買取→ミリ単位でカットされていたことが発覚ｗｗｗｗｗｗ</a>
             <span class="site-name">哲学ニュースnwk</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52307054.html" target="_blank" rel="noopener noreferrer">実はまだ「洋麺屋五右衛門」に行ったことがない</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52307054.html" class="item-title" target="_blank" rel="noopener noreferrer">実はまだ「洋麺屋五右衛門」に行ったことがない</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63429058.html" target="_blank" rel="noopener noreferrer">【悲報】豪雨で水没した残クレアルファード民、逝く</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63429058.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】豪雨で水没した残クレアルファード民、逝く</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123506.html" target="_blank" rel="noopener noreferrer">バイオハザードコードベロニカとかいうガチで理不尽すぎるゲーム</a><br>
+            <a href="http://burusoku-vip.com/archives/2123506.html" class="item-title" target="_blank" rel="noopener noreferrer">バイオハザードコードベロニカとかいうガチで理不尽すぎるゲーム</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://shikaku2ch.doorblog.jp/archives/60010921.html" target="_blank" rel="noopener noreferrer">【悲報】1億2千万でFIREした43歳独身男性、誰とも喋らない圧倒的孤独生活で狂ってしまう…</a><br>
+            <a href="https://shikaku2ch.doorblog.jp/archives/60010921.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】1億2千万でFIREした43歳独身男性、誰とも喋らない圧倒的孤独生活で狂ってしまう…</a>
             <span class="site-name">資格ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://ryusoku.com/archives/5701034.html" target="_blank" rel="noopener noreferrer">【あたおか】やったー！6万円のスマホのアクセサリケースが届いたぞｗｗｗ（※画像あり）</a><br>
+            <a href="http://ryusoku.com/archives/5701034.html" class="item-title" target="_blank" rel="noopener noreferrer">【あたおか】やったー！6万円のスマホのアクセサリケースが届いたぞｗｗｗ（※画像あり）</a>
             <span class="site-name">流速VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601308.html" target="_blank" rel="noopener noreferrer">【動画】オンラインUFOキャッチャーのアシスト機能、一線を越える</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601308.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】オンラインUFOキャッチャーのアシスト機能、一線を越える</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46499116.html" target="_blank" rel="noopener noreferrer">【悲報】日本人、「自販機」で飲み物を買えなくなる・・・</a><br>
+            <a href="https://toushichannel.net/archives/46499116.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】日本人、「自販機」で飲み物を買えなくなる・・・</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066336.html" target="_blank" rel="noopener noreferrer">38歳男性「殺すかここで」逆走して20代女性の運転する車に突っ込む←ほんまに日本か、ここは</a><br>
+            <a href="https://itainews.com/archives/2066336.html" class="item-title" target="_blank" rel="noopener noreferrer">38歳男性「殺すかここで」逆走して20代女性の運転する車に突っ込む←ほんまに日本か、ここは</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101103.html" target="_blank" rel="noopener noreferrer">【悲報】女性声優さん、旅行で彼氏の存在を一瞬言ってしまい即訂正wwwwwwwwwwwwwwwwww</a><br>
+            <a href="https://alfalfalfa.com/articles/11101103.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】女性声優さん、旅行で彼氏の存在を一瞬言ってしまい即訂正wwwwwwwwwwwwwwwwww</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700834.html" target="_blank" rel="noopener noreferrer">バイトリーダーおっさん（46）「メモ取らなくて大丈夫？」僕「大丈夫です」バイトリーダー「そうかなぁ…取ったほうが良いと思うけど」→…論破した結果</a><br>
+            <a href="http://chaos2ch.com/archives/5700834.html" class="item-title" target="_blank" rel="noopener noreferrer">バイトリーダーおっさん（46）「メモ取らなくて大丈夫？」僕「大丈夫です」バイトリーダー「そうかなぁ…取ったほうが良いと思うけど」→…論破した結果</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://money-life.doorblog.jp/archives/60009067.html" target="_blank" rel="noopener noreferrer">ゲーム開発者「インフルエンサーが配信で1億円稼いで開発者にはお金が入らないのおかしくないですか？」</a><br>
+            <a href="https://money-life.doorblog.jp/archives/60009067.html" class="item-title" target="_blank" rel="noopener noreferrer">ゲーム開発者「インフルエンサーが配信で1億円稼いで開発者にはお金が入らないのおかしくないですか？」</a>
             <span class="site-name">マネーライフ2ch|クレジット関連・お金関係</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700933.html" target="_blank" rel="noopener noreferrer">【悲報】東武鉄道4人死亡事故 監視員が列車進入許可の合図を出していた</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700933.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】東武鉄道4人死亡事故 監視員が列車進入許可の合図を出していた</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101189.html" target="_blank" rel="noopener noreferrer">【物議】イギリス政府、日本の死刑執行に声明「いかなる状況でも死刑制度に反対する」</a><br>
+            <a href="https://alfalfalfa.com/articles/11101189.html" class="item-title" target="_blank" rel="noopener noreferrer">【物議】イギリス政府、日本の死刑執行に声明「いかなる状況でも死刑制度に反対する」</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101176.html" target="_blank" rel="noopener noreferrer">【動画】孫娘に貢ぎまくるジッジが見つかるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ【Pickup22061639】</a><br>
+            <a href="https://alfalfalfa.com/articles/11101176.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】孫娘に貢ぎまくるジッジが見つかるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ【Pickup22061639】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63428942.html" target="_blank" rel="noopener noreferrer">【悲報】Xiaomiのスマホ、大幅値上げ</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63428942.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】Xiaomiのスマホ、大幅値上げ</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123507.html" target="_blank" rel="noopener noreferrer">【悲報】カレーハウスCoCo壱番屋、他か値上がりして相対的にそんな高くもなくなる</a><br>
+            <a href="http://burusoku-vip.com/archives/2123507.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】カレーハウスCoCo壱番屋、他か値上がりして相対的にそんな高くもなくなる</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63427653.html" target="_blank" rel="noopener noreferrer">【警告】識者「最近のおじさん差別、全部”おばさん”に置き換えるとこうなる」</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63427653.html" class="item-title" target="_blank" rel="noopener noreferrer">【警告】識者「最近のおじさん差別、全部”おばさん”に置き換えるとこうなる」</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066331.html" target="_blank" rel="noopener noreferrer">「暴力と胸や尻を触るセクハラが日常」北海道の農業法人で町議務める父親とその息子から虐待か…ミャンマー人女性4人が明かす凄惨な実態</a><br>
+            <a href="https://itainews.com/archives/2066331.html" class="item-title" target="_blank" rel="noopener noreferrer">「暴力と胸や尻を触るセクハラが日常」北海道の農業法人で町議務める父親とその息子から虐待か…ミャンマー人女性4人が明かす凄惨な実態</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700835.html" target="_blank" rel="noopener noreferrer">【絶望】日本人さん、世界中から「陰湿」だと思われていたことが判明してしまう</a><br>
+            <a href="http://chaos2ch.com/archives/5700835.html" class="item-title" target="_blank" rel="noopener noreferrer">【絶望】日本人さん、世界中から「陰湿」だと思われていたことが判明してしまう</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101110.html" target="_blank" rel="noopener noreferrer">【悲報】昨日のスペーシアX事故、現場手前400m地点の見張り員が意思疎通できなかった模様</a><br>
+            <a href="https://alfalfalfa.com/articles/11101110.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】昨日のスペーシアX事故、現場手前400m地点の見張り員が意思疎通できなかった模様</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700805.html" target="_blank" rel="noopener noreferrer">医学生「はぁ…はぁ…めっちゃ勉強して医師免許とったぞ…！さて！みんなの肛門を治すか！」→肛門科医</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700805.html" class="item-title" target="_blank" rel="noopener noreferrer">医学生「はぁ…はぁ…めっちゃ勉強して医師免許とったぞ…！さて！みんなの肛門を治すか！」→肛門科医</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46499096.html" target="_blank" rel="noopener noreferrer">【悲報】Appleさん、「iPhone用のメモリ高騰」で中国に泣きつくも拒否される</a><br>
+            <a href="https://toushichannel.net/archives/46499096.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】Appleさん、「iPhone用のメモリ高騰」で中国に泣きつくも拒否される</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://nwknews.jp/archives/6254329.html" target="_blank" rel="noopener noreferrer">【悲報】ロシア軍、死者24万1088人　平均年齢38歳で開戦直後より13歳上昇「若い精鋭が尽き、志願兵と受刑者が戦場へ」</a><br>
+            <a href="https://nwknews.jp/archives/6254329.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ロシア軍、死者24万1088人　平均年齢38歳で開戦直後より13歳上昇「若い精鋭が尽き、志願兵と受刑者が戦場へ」</a>
             <span class="site-name">哲学ニュースnwk</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101187.html" target="_blank" rel="noopener noreferrer">【衝撃】ヒカルの彼女、こういうことだった</a><br>
+            <a href="https://alfalfalfa.com/articles/11101187.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】ヒカルの彼女、こういうことだった</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63428929.html" target="_blank" rel="noopener noreferrer">【愕然】今日タワマン住みを自慢された結果・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63428929.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】今日タワマン住みを自慢された結果・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700792.html" target="_blank" rel="noopener noreferrer">女性声優の前田佳織里さん、ストーカー被害でお気持ち表明する</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700792.html" class="item-title" target="_blank" rel="noopener noreferrer">女性声優の前田佳織里さん、ストーカー被害でお気持ち表明する</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52307018.html" target="_blank" rel="noopener noreferrer">【悲報】クールジャパン機構、廃止へ</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52307018.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】クールジャパン機構、廃止へ</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63428880.html" target="_blank" rel="noopener noreferrer">【悲報】ICCの所長制裁に欧州各国が反発、アメリカへの対抗策求める声。一方、日本政府はダンマリ…</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63428880.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ICCの所長制裁に欧州各国が反発、アメリカへの対抗策求める声。一方、日本政府はダンマリ…</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47621702.html" target="_blank" rel="noopener noreferrer">【画像】どの女性と結婚したい？ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://orusoku.com/archives/47621702.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】どの女性と結婚したい？ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123508.html" target="_blank" rel="noopener noreferrer">【画像】鳥取県にある国立公園大山の県道で野生の食パンwwwwwwwwwww</a><br>
+            <a href="http://burusoku-vip.com/archives/2123508.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】鳥取県にある国立公園大山の県道で野生の食パンwwwwwwwwwww</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://itainews.com/archives/2066327.html" target="_blank" rel="noopener noreferrer">【こども家庭庁】最多7.8兆円の概算要求へ　子どもの自殺対策費など</a><br>
+            <a href="https://itainews.com/archives/2066327.html" class="item-title" target="_blank" rel="noopener noreferrer">【こども家庭庁】最多7.8兆円の概算要求へ　子どもの自殺対策費など</a>
             <span class="site-name">痛いニュース(ﾉ∀`)</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700836.html" target="_blank" rel="noopener noreferrer">マナー講師「割り箸を横に割るのはマナー違反、縦に割れ」俺アシスタント講師「縦に割ると横の人に肘を向けるから失礼なのでダメ」</a><br>
+            <a href="http://chaos2ch.com/archives/5700836.html" class="item-title" target="_blank" rel="noopener noreferrer">マナー講師「割り箸を横に割るのはマナー違反、縦に割れ」俺アシスタント講師「縦に割ると横の人に肘を向けるから失礼なのでダメ」</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101113.html" target="_blank" rel="noopener noreferrer">【江別大学生集団暴行死】主犯格とされる被告、IQ58・知的障害・難聴が明らかに…裁判への影響は？</a><br>
+            <a href="https://alfalfalfa.com/articles/11101113.html" class="item-title" target="_blank" rel="noopener noreferrer">【江別大学生集団暴行死】主犯格とされる被告、IQ58・知的障害・難聴が明らかに…裁判への影響は？</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700788.html" target="_blank" rel="noopener noreferrer">「回転焼きのつぶあんが気にくわない」警察に159回電話した神戸市須磨区のこしあん派無職、逮捕される。</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700788.html" class="item-title" target="_blank" rel="noopener noreferrer">「回転焼きのつぶあんが気にくわない」警察に159回電話した神戸市須磨区のこしあん派無職、逮捕される。</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101185.html" target="_blank" rel="noopener noreferrer">【動画】移動販売のお姉さん、移動するだけで可愛いｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://alfalfalfa.com/articles/11101185.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】移動販売のお姉さん、移動するだけで可愛いｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101177.html" target="_blank" rel="noopener noreferrer">【音量注意】女性配信者さん、今年も超会議後に激痛足つぼマッサージを受けてリアクションが限界突破ｗｗｗ【Pickup22061642】</a><br>
+            <a href="https://alfalfalfa.com/articles/11101177.html" class="item-title" target="_blank" rel="noopener noreferrer">【音量注意】女性配信者さん、今年も超会議後に激痛足つぼマッサージを受けてリアクションが限界突破ｗｗｗ【Pickup22061642】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52306942.html" target="_blank" rel="noopener noreferrer">訪問介護ヘルパー、重度障害者を2時間半放置してパチンコ「当たりが出たので…」</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52306942.html" class="item-title" target="_blank" rel="noopener noreferrer">訪問介護ヘルパー、重度障害者を2時間半放置してパチンコ「当たりが出たので…」</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63428824.html" target="_blank" rel="noopener noreferrer">小渕優子「消費税を作るためにどれだけの先人の苦労があって現在があるのか、たやすく減税なんて言ってはいけない」</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63428824.html" class="item-title" target="_blank" rel="noopener noreferrer">小渕優子「消費税を作るためにどれだけの先人の苦労があって現在があるのか、たやすく減税なんて言ってはいけない」</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123509.html" target="_blank" rel="noopener noreferrer">【悲報】馬鹿「佐賀県って何も無いな」←こいつwwwwwwww</a><br>
+            <a href="http://burusoku-vip.com/archives/2123509.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】馬鹿「佐賀県って何も無いな」←こいつwwwwwwww</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://nwknews.jp/archives/6254318.html" target="_blank" rel="noopener noreferrer">【疑問】なぜ人は「正論」を言われると素直に認めず、むしろ反撃してしまうのか？</a><br>
+            <a href="https://nwknews.jp/archives/6254318.html" class="item-title" target="_blank" rel="noopener noreferrer">【疑問】なぜ人は「正論」を言われると素直に認めず、むしろ反撃してしまうのか？</a>
             <span class="site-name">哲学ニュースnwk</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47621694.html" target="_blank" rel="noopener noreferrer">【画像】撮り鉄「人生で初めて110番通報したわ…」</a><br>
+            <a href="https://orusoku.com/archives/47621694.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】撮り鉄「人生で初めて110番通報したわ…」</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63427568.html" target="_blank" rel="noopener noreferrer">【速報】北海道、なんか奴隷農場を経営してた模様</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63427568.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】北海道、なんか奴隷農場を経営してた模様</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700818.html" target="_blank" rel="noopener noreferrer">【悲報】資産1.2億でFIREした男性「主夫になったら妻も娘も消えた。お金なんて貯めなきゃよかった...」</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700818.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】資産1.2億でFIREした男性「主夫になったら妻も娘も消えた。お金なんて貯めなきゃよかった...」</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46496702.html" target="_blank" rel="noopener noreferrer">外貨預金の伸び、過去最大4兆円。家計･企業で進む「円からの資産分散」</a><br>
+            <a href="https://toushichannel.net/archives/46496702.html" class="item-title" target="_blank" rel="noopener noreferrer">外貨預金の伸び、過去最大4兆円。家計･企業で進む「円からの資産分散」</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101186.html" target="_blank" rel="noopener noreferrer">【奇跡の動画】事故で吹っ飛んだ車、販売店の展示車の間に“完璧な駐車”を決めるｗｗｗｗｗｗ</a><br>
+            <a href="https://alfalfalfa.com/articles/11101186.html" class="item-title" target="_blank" rel="noopener noreferrer">【奇跡の動画】事故で吹っ飛んだ車、販売店の展示車の間に“完璧な駐車”を決めるｗｗｗｗｗｗ</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63428789.html" target="_blank" rel="noopener noreferrer">【朗報】ベトナム政府「海外不法滞在の罰則を強化する！」→日本の入管へぞろぞろと出頭へ</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63428789.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】ベトナム政府「海外不法滞在の罰則を強化する！」→日本の入管へぞろぞろと出頭へ</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700864.html" target="_blank" rel="noopener noreferrer">【動画】中国ロボ「ウオオオオォ！」→爆発ｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700864.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】中国ロボ「ウオオオオォ！」→爆発ｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52306120.html" target="_blank" rel="noopener noreferrer">日傘初めて買ったけど良いね…</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52306120.html" class="item-title" target="_blank" rel="noopener noreferrer">日傘初めて買ったけど良いね…</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101182.html" target="_blank" rel="noopener noreferrer">【速報】タモリ、81歳</a><br>
+            <a href="https://alfalfalfa.com/articles/11101182.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】タモリ、81歳</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700754.html" target="_blank" rel="noopener noreferrer">ヨーヨーの世界大会もう何がなんだかわからないレベルまでくる</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700754.html" class="item-title" target="_blank" rel="noopener noreferrer">ヨーヨーの世界大会もう何がなんだかわからないレベルまでくる</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52307051.html" target="_blank" rel="noopener noreferrer">【悲報】『旭ポンズ』が生産停止へ</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52307051.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】『旭ポンズ』が生産停止へ</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123510.html" target="_blank" rel="noopener noreferrer">フードデリバリー配達員←小汚いオッサン多いよな</a><br>
+            <a href="http://burusoku-vip.com/archives/2123510.html" class="item-title" target="_blank" rel="noopener noreferrer">フードデリバリー配達員←小汚いオッサン多いよな</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="http://ryusoku.com/archives/5701005.html" target="_blank" rel="noopener noreferrer">ニートワイ、ニートの女つかまえ、同棲へｗｗｗ</a><br>
+            <a href="http://ryusoku.com/archives/5701005.html" class="item-title" target="_blank" rel="noopener noreferrer">ニートワイ、ニートの女つかまえ、同棲へｗｗｗ</a>
             <span class="site-name">流速VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://shikaku2ch.doorblog.jp/archives/60010447.html" target="_blank" rel="noopener noreferrer">あり得ないと世間から批判された富士山7歳置き去り父親。上の子が勝手に登ってしまい仕方なくだった！</a><br>
+            <a href="https://shikaku2ch.doorblog.jp/archives/60010447.html" class="item-title" target="_blank" rel="noopener noreferrer">あり得ないと世間から批判された富士山7歳置き去り父親。上の子が勝手に登ってしまい仕方なくだった！</a>
             <span class="site-name">資格ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700837.html" target="_blank" rel="noopener noreferrer">バカ「永久機関は存在しない」ワイ「太陽光や磁力使えば人間が生存する範囲での永久機関のエネルギー生成は可能」</a><br>
+            <a href="http://chaos2ch.com/archives/5700837.html" class="item-title" target="_blank" rel="noopener noreferrer">バカ「永久機関は存在しない」ワイ「太陽光や磁力使えば人間が生存する範囲での永久機関のエネルギー生成は可能」</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700771.html" target="_blank" rel="noopener noreferrer">人気声優さん、うっかり友達のことを「彼…」と発言してしまうwwwwww wwwwww</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700771.html" class="item-title" target="_blank" rel="noopener noreferrer">人気声優さん、うっかり友達のことを「彼…」と発言してしまうwwwwww wwwwww</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100950.html" target="_blank" rel="noopener noreferrer">【画像】アメリカの水着コンテスト優勝者、あまりにも規格外すぎて他の参加者を圧倒ｗｗｗｗｗｗ</a><br>
+            <a href="https://alfalfalfa.com/articles/11100950.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】アメリカの水着コンテスト優勝者、あまりにも規格外すぎて他の参加者を圧倒ｗｗｗｗｗｗ</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101170.html" target="_blank" rel="noopener noreferrer">【朗報画像】グラドルさん「この水着はデスノートのミサミサをイメージしました」【Pickup22061623】</a><br>
+            <a href="https://alfalfalfa.com/articles/11101170.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報画像】グラドルさん「この水着はデスノートのミサミサをイメージしました」【Pickup22061623】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31465189.html" target="_blank" rel="noopener noreferrer">【画像】早稲田大学のチアリーダー達、かわいいｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31465189.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】早稲田大学のチアリーダー達、かわいいｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/10970895.html" target="_blank" rel="noopener noreferrer">【悲報】イチロー「最近料理にハマってます。40日間毎日オムライス作ってました」</a><br>
+            <a href="https://alfalfalfa.com/articles/10970895.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】イチロー「最近料理にハマってます。40日間毎日オムライス作ってました」</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700772.html" target="_blank" rel="noopener noreferrer">【朗報】ワイ、初のVIO脱毛を終えるｗｗｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700772.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】ワイ、初のVIO脱毛を終えるｗｗｗｗｗ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123533.html" target="_blank" rel="noopener noreferrer">【画像】港区女子ショートスリーパー説ｗｗｗ</a><br>
+            <a href="http://burusoku-vip.com/archives/2123533.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】港区女子ショートスリーパー説ｗｗｗ</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11101178.html" target="_blank" rel="noopener noreferrer">【画像】細身のイギリスの女の子(23)「体を使って話しましょう…【Pickup22061644】</a><br>
+            <a href="https://alfalfalfa.com/articles/11101178.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】細身のイギリスの女の子(23)「体を使って話しましょう…【Pickup22061644】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52307041.html" target="_blank" rel="noopener noreferrer">逆走して正面衝突した男「殺すか ここで」金属バット片手に運転していた20代女性を恫喝</a><br>
+            <a href="http://blog.livedoor.jp/goldennews/archives/52307041.html" class="item-title" target="_blank" rel="noopener noreferrer">逆走して正面衝突した男「殺すか ここで」金属バット片手に運転していた20代女性を恫喝</a>
             <span class="site-name">ゴールデンタイムズ</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123511.html" target="_blank" rel="noopener noreferrer">【動画】女、人に化けたタヌキだった【動画あり】</a><br>
+            <a href="http://burusoku-vip.com/archives/2123511.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】女、人に化けたタヌキだった【動画あり】</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://money-life.doorblog.jp/archives/60010277.html" target="_blank" rel="noopener noreferrer">ビットコイン　大暴騰してしまうｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://money-life.doorblog.jp/archives/60010277.html" class="item-title" target="_blank" rel="noopener noreferrer">ビットコイン　大暴騰してしまうｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">マネーライフ2ch|クレジット関連・お金関係</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/10969804.html" target="_blank" rel="noopener noreferrer">【悲報】女性「頑張って垢抜けました！」→まさかの「昔のほうが好き」でブチギレｗｗｗｗｗｗ</a><br>
+            <a href="https://alfalfalfa.com/articles/10969804.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】女性「頑張って垢抜けました！」→まさかの「昔のほうが好き」でブチギレｗｗｗｗｗｗ</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700809.html" target="_blank" rel="noopener noreferrer">デカすぎるムカデ、発見されるwwwwwwwwwwwwww</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700809.html" class="item-title" target="_blank" rel="noopener noreferrer">デカすぎるムカデ、発見されるwwwwwwwwwwwwww</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123532.html" target="_blank" rel="noopener noreferrer">【悲報】ちいかわ作者、性別判明ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://burusoku-vip.com/archives/2123532.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ちいかわ作者、性別判明ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/goldennews/archives/52306022.html" target="_blank" rel="noopener noreferrer">【悲報】トルネコの不思議なダンジョン「死んだらレベル１からやり直しです」←これｗｗｗｗｗ</a><br>
-            <span class="site-name">ゴールデンタイムズ</span>
-        </div>
-    
-        <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123512.html" target="_blank" rel="noopener noreferrer">主婦「そうめん作るのは重労働！」←いや、10分あればできるやんwwwwww</a><br>
+            <a href="http://burusoku-vip.com/archives/2123512.html" class="item-title" target="_blank" rel="noopener noreferrer">主婦「そうめん作るのは重労働！」←いや、10分あればできるやんwwwwww</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/10970684.html" target="_blank" rel="noopener noreferrer">【地獄】投資デビューした専業主婦、わずか1日で資金の3分の2を溶かしてしまう…</a><br>
+            <a href="https://alfalfalfa.com/articles/10970684.html" class="item-title" target="_blank" rel="noopener noreferrer">【地獄】投資デビューした専業主婦、わずか1日で資金の3分の2を溶かしてしまう…</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700795.html" target="_blank" rel="noopener noreferrer">ベトナム政府が9月10日から海外で不法滞在、不法就労したベトナム人に8000万〜1億ドン（約48万〜60万円）の罰金を決定ｗｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700795.html" class="item-title" target="_blank" rel="noopener noreferrer">ベトナム政府が9月10日から海外で不法滞在、不法就労したベトナム人に8000万〜1億ドン（約48万〜60万円）の罰金を決定ｗｗｗｗ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/10969144.html" target="_blank" rel="noopener noreferrer">【画像】これが日本の首都のリアル…東京の「光と影」が一発で分かる写真がこちら</a><br>
+            <a href="https://alfalfalfa.com/articles/10969144.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】これが日本の首都のリアル…東京の「光と影」が一発で分かる写真がこちら</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100668.html" target="_blank" rel="noopener noreferrer">【画像】滋賀県舐めてたわ…ご当地JKの青春感が可愛すぎるｗｗｗｗ【Pickup20190556】</a><br>
+            <a href="https://alfalfalfa.com/articles/11100668.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】滋賀県舐めてたわ…ご当地JKの青春感が可愛すぎるｗｗｗｗ【Pickup20190556】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63428538.html" target="_blank" rel="noopener noreferrer">金持ちがすげー憎いんだが、わかる人おる？</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63428538.html" class="item-title" target="_blank" rel="noopener noreferrer">金持ちがすげー憎いんだが、わかる人おる？</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/10968463.html" target="_blank" rel="noopener noreferrer">【衝撃】長嶋茂雄さんの現役時代、想像以上に化け物だったｗｗｗｗｗｗ</a><br>
+            <a href="https://alfalfalfa.com/articles/10968463.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】長嶋茂雄さんの現役時代、想像以上に化け物だったｗｗｗｗｗｗ</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100669.html" target="_blank" rel="noopener noreferrer">【悲報】お天気お姉さん、なぜか話が入ってこないｗｗｗｗｗ【Pickup20190600】</a><br>
+            <a href="https://alfalfalfa.com/articles/11100669.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】お天気お姉さん、なぜか話が入ってこないｗｗｗｗｗ【Pickup20190600】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700785.html" target="_blank" rel="noopener noreferrer">【悲報】忍たま乱太郎ローソンキャンペーン、なんかキモい</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700785.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】忍たま乱太郎ローソンキャンペーン、なんかキモい</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100437.html" target="_blank" rel="noopener noreferrer">【悲報】人気パズル誌『ナンプレ広場』の出版社が破産…「懸賞品を送れないので応募しないで」と異例の呼びかけ</a><br>
+            <a href="https://alfalfalfa.com/articles/11100437.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】人気パズル誌『ナンプレ広場』の出版社が破産…「懸賞品を送れないので応募しないで」と異例の呼びかけ</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63428136.html" target="_blank" rel="noopener noreferrer">6年くらい無職だけど質問ある？</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63428136.html" class="item-title" target="_blank" rel="noopener noreferrer">6年くらい無職だけど質問ある？</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100670.html" target="_blank" rel="noopener noreferrer">【動画】矢口真里（42）が別人級に変わったと話題にｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ【Pickup20190603】</a><br>
+            <a href="https://alfalfalfa.com/articles/11100670.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】矢口真里（42）が別人級に変わったと話題にｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ【Pickup20190603】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63428171.html" target="_blank" rel="noopener noreferrer">【朗報】新型Xperia、ガチで期待できそう。iPhoneはオワリかもな</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63428171.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】新型Xperia、ガチで期待できそう。iPhoneはオワリかもな</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://ryusoku.com/archives/5700987.html" target="_blank" rel="noopener noreferrer">台湾から帰ってきたやで（※画像あり）</a><br>
+            <a href="http://ryusoku.com/archives/5700987.html" class="item-title" target="_blank" rel="noopener noreferrer">台湾から帰ってきたやで（※画像あり）</a>
             <span class="site-name">流速VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100613.html" target="_blank" rel="noopener noreferrer">【文化の違い】ドイツ人「日焼けしてる方がかっこいい。日本人の日焼け対策に驚いた」</a><br>
+            <a href="https://alfalfalfa.com/articles/11100613.html" class="item-title" target="_blank" rel="noopener noreferrer">【文化の違い】ドイツ人「日焼けしてる方がかっこいい。日本人の日焼け対策に驚いた」</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700857.html" target="_blank" rel="noopener noreferrer">尾田栄一郎「リセマラ？やりません！ガチャ回し放題だから！」「そうなる方法は自分で考えてくださいｗ」</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700857.html" class="item-title" target="_blank" rel="noopener noreferrer">尾田栄一郎「リセマラ？やりません！ガチャ回し放題だから！」「そうなる方法は自分で考えてくださいｗ」</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://nwknews.jp/archives/6254287.html" target="_blank" rel="noopener noreferrer">【画像】ヤバ過ぎるほど笑った画像貼っていけｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://nwknews.jp/archives/6254287.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】ヤバ過ぎるほど笑った画像貼っていけｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">哲学ニュースnwk</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100671.html" target="_blank" rel="noopener noreferrer">【議論】歴代女子アナで一番可愛かったのって結局だれなん？【Pickup20190605】</a><br>
+            <a href="https://alfalfalfa.com/articles/11100671.html" class="item-title" target="_blank" rel="noopener noreferrer">【議論】歴代女子アナで一番可愛かったのって結局だれなん？【Pickup20190605】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63427934.html" target="_blank" rel="noopener noreferrer">【緊急】ワイ(35)、ガチで際限なく太る</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63427934.html" class="item-title" target="_blank" rel="noopener noreferrer">【緊急】ワイ(35)、ガチで際限なく太る</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700812.html" target="_blank" rel="noopener noreferrer">イスラエルさん、ドパガキ向けに「パレスチナ人処刑」をライブ配信する施設を建設してしまうｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700812.html" class="item-title" target="_blank" rel="noopener noreferrer">イスラエルさん、ドパガキ向けに「パレスチナ人処刑」をライブ配信する施設を建設してしまうｗｗｗ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63427844.html" target="_blank" rel="noopener noreferrer">【悲報】引きこもりニート、実は有能だったｗｗｗｗｗｗｗｗ理由がこちらｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63427844.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】引きこもりニート、実は有能だったｗｗｗｗｗｗｗｗ理由がこちらｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123513.html" target="_blank" rel="noopener noreferrer">【悲報】昨日のトラックの自損事故、想像の500倍ヤバィ</a><br>
+            <a href="http://burusoku-vip.com/archives/2123513.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】昨日のトラックの自損事故、想像の500倍ヤバィ</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="http://ryusoku.com/archives/5700983.html" target="_blank" rel="noopener noreferrer">ワイ「えーと、チキン南蛮定食と冷や汁…っと」（※画像あり）</a><br>
+            <a href="http://ryusoku.com/archives/5700983.html" class="item-title" target="_blank" rel="noopener noreferrer">ワイ「えーと、チキン南蛮定食と冷や汁…っと」（※画像あり）</a>
             <span class="site-name">流速VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63427513.html" target="_blank" rel="noopener noreferrer">みいちゃんと山田さん作者「みい山を読んでくれた人の中に何が残ったか、それが全てです」</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63427513.html" class="item-title" target="_blank" rel="noopener noreferrer">みいちゃんと山田さん作者「みい山を読んでくれた人の中に何が残ったか、それが全てです」</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100847.html" target="_blank" rel="noopener noreferrer">【画像】ほしのあき、とんでもない“真実”が明らかになる</a><br>
+            <a href="https://alfalfalfa.com/articles/11100847.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】ほしのあき、とんでもない“真実”が明らかになる</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46499070.html" target="_blank" rel="noopener noreferrer">バイト先で「クレカ窃盗逮捕」の慶応女子大生、大手金融機関の内定が決まっていた模様ｗｗｗｗｗ</a><br>
+            <a href="https://toushichannel.net/archives/46499070.html" class="item-title" target="_blank" rel="noopener noreferrer">バイト先で「クレカ窃盗逮捕」の慶応女子大生、大手金融機関の内定が決まっていた模様ｗｗｗｗｗ</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700796.html" target="_blank" rel="noopener noreferrer">【悲報】キモオタク、新幹線の座席でエロゲやり始めて炎上ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700796.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】キモオタク、新幹線の座席でエロゲやり始めて炎上ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700838.html" target="_blank" rel="noopener noreferrer">ワイ「ドイツ語かっこええなぁ…「真紅」とか尚更かっこええんやろなぁ…」</a><br>
+            <a href="http://chaos2ch.com/archives/5700838.html" class="item-title" target="_blank" rel="noopener noreferrer">ワイ「ドイツ語かっこええなぁ…「真紅」とか尚更かっこええんやろなぁ…」</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://nwknews.jp/archives/6254276.html" target="_blank" rel="noopener noreferrer">【懐かしい】ジャスコ→イオン、国鉄→JRみたいな「昔の名前のほうが馴染みあるもの」教えて</a><br>
+            <a href="https://nwknews.jp/archives/6254276.html" class="item-title" target="_blank" rel="noopener noreferrer">【懐かしい】ジャスコ→イオン、国鉄→JRみたいな「昔の名前のほうが馴染みあるもの」教えて</a>
             <span class="site-name">哲学ニュースnwk</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63427809.html" target="_blank" rel="noopener noreferrer">【朗報】Google、大学生にGeminiが使える「Google AI Plus」を無料提供開始。400GBのストレージ付き</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63427809.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】Google、大学生にGeminiが使える「Google AI Plus」を無料提供開始。400GBのストレージ付き</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100949.html" target="_blank" rel="noopener noreferrer">【朗報】ひろゆき「おいら達の政党は公約守れなかったら給与なしです」</a><br>
+            <a href="https://alfalfalfa.com/articles/11100949.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】ひろゆき「おいら達の政党は公約守れなかったら給与なしです」</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700773.html" target="_blank" rel="noopener noreferrer">【画像】えなこが勝てなかった平成のトップコスプレイヤーさん、今見てもなかなかエロい</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700773.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】えなこが勝てなかった平成のトップコスプレイヤーさん、今見てもなかなかエロい</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://burusoku-vip.com/archives/2123514.html" target="_blank" rel="noopener noreferrer">【画像】生成AIが作るキモすぎる料理、大体出揃う</a><br>
+            <a href="http://burusoku-vip.com/archives/2123514.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】生成AIが作るキモすぎる料理、大体出揃う</a>
             <span class="site-name">ぶる速-VIP</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63427791.html" target="_blank" rel="noopener noreferrer">【朗報】中国の動画サイト「bilibili」、日本上陸</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63427791.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】中国の動画サイト「bilibili」、日本上陸</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="https://shikaku2ch.doorblog.jp/archives/60009952.html" target="_blank" rel="noopener noreferrer">【悲報】北海道のブロッコリー農家、特定技能実習生（ミャンマー人女性4人）にやりたい放題</a><br>
+            <a href="https://shikaku2ch.doorblog.jp/archives/60009952.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】北海道のブロッコリー農家、特定技能実習生（ミャンマー人女性4人）にやりたい放題</a>
             <span class="site-name">資格ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://ryusoku.com/archives/5700961.html" target="_blank" rel="noopener noreferrer">俺の姉とマッマ、姉がクズ男と再婚したのを期に６０００万円ローンで２世帯住宅建てる。俺蚊帳の外。</a><br>
+            <a href="http://ryusoku.com/archives/5700961.html" class="item-title" target="_blank" rel="noopener noreferrer">俺の姉とマッマ、姉がクズ男と再婚したのを期に６０００万円ローンで２世帯住宅建てる。俺蚊帳の外。</a>
             <span class="site-name">流速VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63427563.html" target="_blank" rel="noopener noreferrer">【速報】親公認で生徒と付き合って抱きしめた高校教師、バレて懲戒免職</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63427563.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】親公認で生徒と付き合って抱きしめた高校教師、バレて懲戒免職</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700800.html" target="_blank" rel="noopener noreferrer">女優「のん」さん、今見ると全盛期がガチで凄いｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700800.html" class="item-title" target="_blank" rel="noopener noreferrer">女優「のん」さん、今見ると全盛期がガチで凄いｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46499085.html" target="_blank" rel="noopener noreferrer">男性（42）「資産1億2,000万円でFIREし“主夫宣言”をした8ヵ月後、妻も娘も消えた」</a><br>
+            <a href="https://toushichannel.net/archives/46499085.html" class="item-title" target="_blank" rel="noopener noreferrer">男性（42）「資産1億2,000万円でFIREし“主夫宣言”をした8ヵ月後、妻も娘も消えた」</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700599.html" target="_blank" rel="noopener noreferrer">彼女(30)「子供できた♥」　ワイ「よっしゃ！今夜はパーティや！」→…驚きの内容がこちら</a><br>
+            <a href="http://chaos2ch.com/archives/5700599.html" class="item-title" target="_blank" rel="noopener noreferrer">彼女(30)「子供できた♥」　ワイ「よっしゃ！今夜はパーティや！」→…驚きの内容がこちら</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://money-life.doorblog.jp/archives/60000472.html" target="_blank" rel="noopener noreferrer">眞鍋かをり、消費税減税に賛成の理由「反対している人たちは筋通らなくないですか？」減税が実現しなかった場合…</a><br>
+            <a href="https://money-life.doorblog.jp/archives/60000472.html" class="item-title" target="_blank" rel="noopener noreferrer">眞鍋かをり、消費税減税に賛成の理由「反対している人たちは筋通らなくないですか？」減税が実現しなかった場合…</a>
             <span class="site-name">マネーライフ2ch|クレジット関連・お金関係</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100948.html" target="_blank" rel="noopener noreferrer">【悲報】あの、ひょっとして「A級戦犯」について「A級なんだから一番悪いヤツらなんだ」と勘違いしてる人が一定数いらっしゃる…？</a><br>
+            <a href="https://alfalfalfa.com/articles/11100948.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】あの、ひょっとして「A級戦犯」について「A級なんだから一番悪いヤツらなんだ」と勘違いしてる人が一定数いらっしゃる…？</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100942.html" target="_blank" rel="noopener noreferrer">【画像】フジの街頭インタビューに“とんでもない美女”が登場→正体判明で「一般人じゃないのかよ」「仕込み？」の声</a><br>
+            <a href="https://alfalfalfa.com/articles/11100942.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】フジの街頭インタビューに“とんでもない美女”が登場→正体判明で「一般人じゃないのかよ」「仕込み？」の声</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://nwknews.jp/archives/6254249.html" target="_blank" rel="noopener noreferrer">【懐かしすぎ】「これまだ売ってたの！？」って驚いた物あげてけｗｗｗｗｗ</a><br>
+            <a href="https://nwknews.jp/archives/6254249.html" class="item-title" target="_blank" rel="noopener noreferrer">【懐かしすぎ】「これまだ売ってたの！？」って驚いた物あげてけｗｗｗｗｗ</a>
             <span class="site-name">哲学ニュースnwk</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700783.html" target="_blank" rel="noopener noreferrer">【悲報】人気アイドルさん、生配信で口を滑らせてしまい終わる</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700783.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】人気アイドルさん、生配信で口を滑らせてしまい終わる</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100848.html" target="_blank" rel="noopener noreferrer">【朗報】ベトナム政府「海外で違法残留した奴ら高額罰金な」→ビビったベトナム人が入管に殺到する事態に【HotTweets】</a><br>
+            <a href="https://alfalfalfa.com/articles/11100848.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】ベトナム政府「海外で違法残留した奴ら高額罰金な」→ビビったベトナム人が入管に殺到する事態に【HotTweets】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63427742.html" target="_blank" rel="noopener noreferrer">【正論】たぬかな「みい山批判してるバカは叩きたいだけ。見えへんかったらええだけやんけ」</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63427742.html" class="item-title" target="_blank" rel="noopener noreferrer">【正論】たぬかな「みい山批判してるバカは叩きたいだけ。見えへんかったらええだけやんけ」</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="https://shikaku2ch.doorblog.jp/archives/60009852.html" target="_blank" rel="noopener noreferrer">【投資】20代のNISA買い付け17倍　制度開始の14年比、将来に備え</a><br>
+            <a href="https://shikaku2ch.doorblog.jp/archives/60009852.html" class="item-title" target="_blank" rel="noopener noreferrer">【投資】20代のNISA買い付け17倍　制度開始の14年比、将来に備え</a>
             <span class="site-name">資格ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63427506.html" target="_blank" rel="noopener noreferrer">【速報】ひろゆき「おいら達の政党は公約守れなかったら給与なしです」</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63427506.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】ひろゆき「おいら達の政党は公約守れなかったら給与なしです」</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100940.html" target="_blank" rel="noopener noreferrer">【悲報】「3年働けば会社も手放さないはず」非正規雇用のルール、現実では“新人への交換制度”になっていた…</a><br>
+            <a href="https://alfalfalfa.com/articles/11100940.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】「3年働けば会社も手放さないはず」非正規雇用のルール、現実では“新人への交換制度”になっていた…</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700600.html" target="_blank" rel="noopener noreferrer">ワイジ、人と喧嘩した事がなさすぎてとんでもない対応してしまい→…彼女の前で恥をかいてしまう</a><br>
+            <a href="http://chaos2ch.com/archives/5700600.html" class="item-title" target="_blank" rel="noopener noreferrer">ワイジ、人と喧嘩した事がなさすぎてとんでもない対応してしまい→…彼女の前で恥をかいてしまう</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46496693.html" target="_blank" rel="noopener noreferrer">【悲報】介護ヘルパーさん、重度障害者を家に放置しパチンコ店へGO「当たりが出たので・・・」</a><br>
+            <a href="https://toushichannel.net/archives/46496693.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】介護ヘルパーさん、重度障害者を家に放置しパチンコ店へGO「当たりが出たので・・・」</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700863.html" target="_blank" rel="noopener noreferrer">【動画】セミにビビる男性、全女子が蛙化すると話題にＷＷＷＷＷＷＷＷ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700863.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】セミにビビる男性、全女子が蛙化すると話題にＷＷＷＷＷＷＷＷ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100937.html" target="_blank" rel="noopener noreferrer">【激怒】橋下徹氏、高市政権を「口だけ番長」と痛烈批判</a><br>
+            <a href="https://alfalfalfa.com/articles/11100937.html" class="item-title" target="_blank" rel="noopener noreferrer">【激怒】橋下徹氏、高市政権を「口だけ番長」と痛烈批判</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700778.html" target="_blank" rel="noopener noreferrer">ジュニアアイドルさん、幼児性犯罪から守ろうとしてくれたツイートを通報して！とお願いしてしまう</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700778.html" class="item-title" target="_blank" rel="noopener noreferrer">ジュニアアイドルさん、幼児性犯罪から守ろうとしてくれたツイートを通報して！とお願いしてしまう</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47617002.html" target="_blank" rel="noopener noreferrer">【動画】高校球児の守備、流石に雑すぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://orusoku.com/archives/47617002.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】高校球児の守備、流石に雑すぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63427635.html" target="_blank" rel="noopener noreferrer">【朗報】KFCさん、覚醒</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63427635.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】KFCさん、覚醒</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63427426.html" target="_blank" rel="noopener noreferrer">【緊急】俺氏、とんでもないことが判明してしまうｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63427426.html" class="item-title" target="_blank" rel="noopener noreferrer">【緊急】俺氏、とんでもないことが判明してしまうｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://ryusoku.com/archives/5700929.html" target="_blank" rel="noopener noreferrer">三大益虫「ミツバチ」「カマキリ」・・・→</a><br>
+            <a href="http://ryusoku.com/archives/5700929.html" class="item-title" target="_blank" rel="noopener noreferrer">三大益虫「ミツバチ」「カマキリ」・・・→</a>
             <span class="site-name">流速VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://shikaku2ch.doorblog.jp/archives/60009729.html" target="_blank" rel="noopener noreferrer">日本の労働者たち、高市政権の「労働時間規制緩和」に大喜び!!!!!!!.!</a><br>
+            <a href="https://shikaku2ch.doorblog.jp/archives/60009729.html" class="item-title" target="_blank" rel="noopener noreferrer">日本の労働者たち、高市政権の「労働時間規制緩和」に大喜び!!!!!!!.!</a>
             <span class="site-name">資格ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63427592.html" target="_blank" rel="noopener noreferrer">【速報】台風18号、福岡、大阪、名古屋、東京を総ナメ</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63427592.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】台風18号、福岡、大阪、名古屋、東京を総ナメ</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700816.html" target="_blank" rel="noopener noreferrer">【動画】台湾のコスプレイヤーのお尻を好きに触れるイベント、ガチでエロ過ぎるｗｗｗｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700816.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】台湾のコスプレイヤーのお尻を好きに触れるイベント、ガチでエロ過ぎるｗｗｗｗｗｗ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46496688.html" target="_blank" rel="noopener noreferrer">Z「現金払いやめろ。人が並んでるんだ」おばちゃん「ごめんね…でも、順番だから待っててね」</a><br>
+            <a href="https://toushichannel.net/archives/46496688.html" class="item-title" target="_blank" rel="noopener noreferrer">Z「現金払いやめろ。人が並んでるんだ」おばちゃん「ごめんね…でも、順番だから待っててね」</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100935.html" target="_blank" rel="noopener noreferrer">【画像】婚活女性が求める「男性の最低年収」、現実との差がエグすぎるｗｗｗｗｗｗ</a><br>
+            <a href="https://alfalfalfa.com/articles/11100935.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】婚活女性が求める「男性の最低年収」、現実との差がエグすぎるｗｗｗｗｗｗ</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://money-life.doorblog.jp/archives/60008756.html" target="_blank" rel="noopener noreferrer">【悲報】アメリカ「すまん、俺の国の備蓄ヤバいから日本に輸出する原油無くなったわ」←は？</a><br>
+            <a href="https://money-life.doorblog.jp/archives/60008756.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】アメリカ「すまん、俺の国の備蓄ヤバいから日本に輸出する原油無くなったわ」←は？</a>
             <span class="site-name">マネーライフ2ch|クレジット関連・お金関係</span>
         </div>
     
         <div class="item">
-            <a href="http://chaos2ch.com/archives/5700601.html" target="_blank" rel="noopener noreferrer">【感動】夫「お前、托卵しただろ？」妻「はい。黙っていてごめんなさい…」夫「…許すよ」</a><br>
+            <a href="http://chaos2ch.com/archives/5700601.html" class="item-title" target="_blank" rel="noopener noreferrer">【感動】夫「お前、托卵しただろ？」妻「はい。黙っていてごめんなさい…」夫「…許すよ」</a>
             <span class="site-name">カオスちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31459584.html" target="_blank" rel="noopener noreferrer">【動画】JCが語る勉強をする理由、真理すぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31459584.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】JCが語る勉強をする理由、真理すぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700631.html" target="_blank" rel="noopener noreferrer">【悲報】小学生の暴力　10年で7倍に増えてしまう…</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700631.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】小学生の暴力　10年で7倍に増えてしまう…</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100435.html" target="_blank" rel="noopener noreferrer">【画像】地方で活動する「ぐうかわアイドル」、全国に見つかるのも時間の問題ｗｗｗｗｗｗ</a><br>
+            <a href="https://alfalfalfa.com/articles/11100435.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】地方で活動する「ぐうかわアイドル」、全国に見つかるのも時間の問題ｗｗｗｗｗｗ</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700442.html" target="_blank" rel="noopener noreferrer">【悲報】電子マネー派、今も現金払いしてる人に「後ろに並んでる人の事も考えて？」と言い無事炎上</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700442.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】電子マネー派、今も現金払いしてる人に「後ろに並んでる人の事も考えて？」と言い無事炎上</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47617001.html" target="_blank" rel="noopener noreferrer">【動画】BBA、意外と健脚ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://orusoku.com/archives/47617001.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】BBA、意外と健脚ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100672.html" target="_blank" rel="noopener noreferrer">【画像】整形アイドル轟ちゃん（32）「整形してるから老化早い」の声に7年前とのビフォアフ公開「若返ってる」「どんどん綺麗になる」と反響【Pickup20190608】</a><br>
+            <a href="https://alfalfalfa.com/articles/11100672.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】整形アイドル轟ちゃん（32）「整形してるから老化早い」の声に7年前とのビフォアフ公開「若返ってる」「どんどん綺麗になる」と反響【Pickup20190608】</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63427552.html" target="_blank" rel="noopener noreferrer">【速報】みぃ山アニメ、結構ガチでまともな団体から声明が発表される</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63427552.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】みぃ山アニメ、結構ガチでまともな団体から声明が発表される</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700790.html" target="_blank" rel="noopener noreferrer">クールジャパン機構、500億円超の赤字を残しついに解体</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700790.html" class="item-title" target="_blank" rel="noopener noreferrer">クールジャパン機構、500億円超の赤字を残しついに解体</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46496250.html" target="_blank" rel="noopener noreferrer">【疑問】「Uberで生計立ててる人」←マジでいるの？ｗｗｗｗｗ</a><br>
+            <a href="https://toushichannel.net/archives/46496250.html" class="item-title" target="_blank" rel="noopener noreferrer">【疑問】「Uberで生計立ててる人」←マジでいるの？ｗｗｗｗｗ</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100933.html" target="_blank" rel="noopener noreferrer">【正論】X民「生成AIマジで終わらせた方がいい 電気代上がるし水使うし権利侵害だし 少なくとも個人が気軽に好きに使える現状はやっぱりおかしい」</a><br>
+            <a href="https://alfalfalfa.com/articles/11100933.html" class="item-title" target="_blank" rel="noopener noreferrer">【正論】X民「生成AIマジで終わらせた方がいい 電気代上がるし水使うし権利侵害だし 少なくとも個人が気軽に好きに使える現状はやっぱりおかしい」</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://money-life.doorblog.jp/archives/60008783.html" target="_blank" rel="noopener noreferrer">【読売新聞】ICC所長制裁 アメリカの暴挙から国際法廷を守れ</a><br>
+            <a href="https://money-life.doorblog.jp/archives/60008783.html" class="item-title" target="_blank" rel="noopener noreferrer">【読売新聞】ICC所長制裁 アメリカの暴挙から国際法廷を守れ</a>
             <span class="site-name">マネーライフ2ch|クレジット関連・お金関係</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700798.html" target="_blank" rel="noopener noreferrer">【悲報】男の子「もうやだー！疲れたー！」お父さん「わがまま言うならここに置いていくから！じゃあね！」富士六合目に放置</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700798.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】男の子「もうやだー！疲れたー！」お父さん「わがまま言うならここに置いていくから！じゃあね！」富士六合目に放置</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63427428.html" target="_blank" rel="noopener noreferrer">【朗報】韓国兄さん日本に数兆円投資してくれる模様</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63427428.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】韓国兄さん日本に数兆円投資してくれる模様</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="https://alfalfalfa.com/articles/11100983.html" target="_blank" rel="noopener noreferrer">【速報】法務省、ラヴ上等とのコラボ中止を発表　人に火を付けた男が出演</a><br>
+            <a href="https://alfalfalfa.com/articles/11100983.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】法務省、ラヴ上等とのコラボ中止を発表　人に火を付けた男が出演</a>
             <span class="site-name">アルファルファモザイク＠ネットニュースのまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700787.html" target="_blank" rel="noopener noreferrer">日本人インフルエンサー、吊り目ポーズで韓国人煽りしてしまうｗｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700787.html" class="item-title" target="_blank" rel="noopener noreferrer">日本人インフルエンサー、吊り目ポーズで韓国人煽りしてしまうｗｗｗｗ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601285.html" target="_blank" rel="noopener noreferrer">法務省、「ラヴ上等」とのコラボ中止を発表　人に火を付けた男が出演</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601285.html" class="item-title" target="_blank" rel="noopener noreferrer">法務省、「ラヴ上等」とのコラボ中止を発表　人に火を付けた男が出演</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://ryusoku.com/archives/5700883.html" target="_blank" rel="noopener noreferrer">JKワイ、親が毒親と発覚ｗｗｗ（※画像あり）</a><br>
+            <a href="http://ryusoku.com/archives/5700883.html" class="item-title" target="_blank" rel="noopener noreferrer">JKワイ、親が毒親と発覚ｗｗｗ（※画像あり）</a>
             <span class="site-name">流速VIP</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63427490.html" target="_blank" rel="noopener noreferrer">【悲報】『数学』を捨てた人、脳が劣化していると判明</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63427490.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】『数学』を捨てた人、脳が劣化していると判明</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46496246.html" target="_blank" rel="noopener noreferrer">【悲報】ワイの親、「低収入」の癖に労働を勧めてくる</a><br>
+            <a href="https://toushichannel.net/archives/46496246.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ワイの親、「低収入」の癖に労働を勧めてくる</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700814.html" target="_blank" rel="noopener noreferrer">【悲報】パンパース、境界知能スレスレのママさんを困惑させる表記で物議wwww</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700814.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】パンパース、境界知能スレスレのママさんを困惑させる表記で物議wwww</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://money-life.doorblog.jp/archives/60008840.html" target="_blank" rel="noopener noreferrer">【こども家庭庁】最多7.8兆円の概算要求へ　子どもの自殺対策費など</a><br>
+            <a href="https://money-life.doorblog.jp/archives/60008840.html" class="item-title" target="_blank" rel="noopener noreferrer">【こども家庭庁】最多7.8兆円の概算要求へ　子どもの自殺対策費など</a>
             <span class="site-name">マネーライフ2ch|クレジット関連・お金関係</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63427411.html" target="_blank" rel="noopener noreferrer">【悲報】法務省　「ラヴ上等」とのコラボ中止を発表。出演者の「人に火をつけた」発言がきっかけか</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63427411.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】法務省　「ラヴ上等」とのコラボ中止を発表。出演者の「人に火をつけた」発言がきっかけか</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700781.html" target="_blank" rel="noopener noreferrer">仙台育英の女子マネ、何を勘違いしたのか甲子園の砂を集めてしまう</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700781.html" class="item-title" target="_blank" rel="noopener noreferrer">仙台育英の女子マネ、何を勘違いしたのか甲子園の砂を集めてしまう</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47616999.html" target="_blank" rel="noopener noreferrer">【画像】YouTubeのこれ系の動画って何がおもろいん？ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://orusoku.com/archives/47616999.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】YouTubeのこれ系の動画って何がおもろいん？ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63427415.html" target="_blank" rel="noopener noreferrer">【愕然】会社の備品をパクって帰る奴　←　こいつｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63427415.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】会社の備品をパクって帰る奴　←　こいつｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700868.html" target="_blank" rel="noopener noreferrer">【画像】アニメ『新・ワンピース』キービジュアル公開ｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700868.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】アニメ『新・ワンピース』キービジュアル公開ｗｗｗ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46496241.html" target="_blank" rel="noopener noreferrer">【悲報】ワイ、今月の「電気代」が高すぎで気絶しそうｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://toushichannel.net/archives/46496241.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ワイ、今月の「電気代」が高すぎで気絶しそうｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31459573.html" target="_blank" rel="noopener noreferrer">【動画】袋田の滝、増水でヤバいことになるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31459573.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】袋田の滝、増水でヤバいことになるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63427383.html" target="_blank" rel="noopener noreferrer">【朗報】ひろゆき「おいら達の政党は公約守れなかったら給与なしです」</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63427383.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】ひろゆき「おいら達の政党は公約守れなかったら給与なしです」</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700867.html" target="_blank" rel="noopener noreferrer">【画像】女さん、生後３カ月のあかちゃんをよみうりランドプールに連れている様子をSNSにアップしてしまう</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700867.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】女さん、生後３カ月のあかちゃんをよみうりランドプールに連れている様子をSNSにアップしてしまう</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47616997.html" target="_blank" rel="noopener noreferrer">【動画】ダンスバーでJKとダンスした結果ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://orusoku.com/archives/47616997.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】ダンスバーでJKとダンスした結果ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601283.html" target="_blank" rel="noopener noreferrer">JRA舟山瑠泉騎手（20）運転の車と乗用車が衝突し相手死亡　死亡した乗用車運転手は高専の准教授　信号機のある丁字路交差点</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601283.html" class="item-title" target="_blank" rel="noopener noreferrer">JRA舟山瑠泉騎手（20）運転の車と乗用車が衝突し相手死亡　死亡した乗用車運転手は高専の准教授　信号機のある丁字路交差点</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46496000.html" target="_blank" rel="noopener noreferrer">株にも「固定資産税」かけた方が良くね？ｗｗｗｗｗ</a><br>
+            <a href="https://toushichannel.net/archives/46496000.html" class="item-title" target="_blank" rel="noopener noreferrer">株にも「固定資産税」かけた方が良くね？ｗｗｗｗｗ</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31459567.html" target="_blank" rel="noopener noreferrer">【動画】お胸が大き過ぎるグラドルさん、お胸が大き過ぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31459567.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】お胸が大き過ぎるグラドルさん、お胸が大き過ぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63426629.html" target="_blank" rel="noopener noreferrer">【疑問】ドパガキって何が悪いの？</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63426629.html" class="item-title" target="_blank" rel="noopener noreferrer">【疑問】ドパガキって何が悪いの？</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700856.html" target="_blank" rel="noopener noreferrer">【悲報】タイミーさん、「保育園」にまで入り込むwwwwwwwwwwww</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700856.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】タイミーさん、「保育園」にまで入り込むwwwwwwwwwwww</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700806.html" target="_blank" rel="noopener noreferrer">【悲報】ゆたぼん「なんで日本人が英語を学ぶのにお金がかかって外国人が日本語を学ぶのに税金使われるの？」心無い人「？！」ｼｭﾊﾞ</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700806.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ゆたぼん「なんで日本人が英語を学ぶのにお金がかかって外国人が日本語を学ぶのに税金使われるの？」心無い人「？！」ｼｭﾊﾞ</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63425342.html" target="_blank" rel="noopener noreferrer">奨学金「300万無利子で貸してあげるで。返すのは月8000円でええで～」← これｗｗｗ</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63425342.html" class="item-title" target="_blank" rel="noopener noreferrer">奨学金「300万無利子で貸してあげるで。返すのは月8000円でええで～」← これｗｗｗ</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46495999.html" target="_blank" rel="noopener noreferrer">俺の姉とマッマ、姉がクズ男と再婚したのを期に「6000万円」ローンで2世帯住宅建てる・・・</a><br>
+            <a href="https://toushichannel.net/archives/46495999.html" class="item-title" target="_blank" rel="noopener noreferrer">俺の姉とマッマ、姉がクズ男と再婚したのを期に「6000万円」ローンで2世帯住宅建てる・・・</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63427105.html" target="_blank" rel="noopener noreferrer">【朗報】みい山作者「完結しました。みい山を読んでくれた人の中に何が残ったか、それが全てです」</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63427105.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】みい山作者「完結しました。みい山を読んでくれた人の中に何が残ったか、それが全てです」</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700810.html" target="_blank" rel="noopener noreferrer">【悲報】Amazonの配達員さん、うっかり住民を閉じ込めてしまい大炎上wwwwwwwwwwwwwwwwwwwwwwwwwwwww</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700810.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】Amazonの配達員さん、うっかり住民を閉じ込めてしまい大炎上wwwwwwwwwwwwwwwwwwwwwwwwwwwww</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63426711.html" target="_blank" rel="noopener noreferrer">多様性で成功した事例ってなんかある？</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63426711.html" class="item-title" target="_blank" rel="noopener noreferrer">多様性で成功した事例ってなんかある？</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63424502.html" target="_blank" rel="noopener noreferrer">【速報】ワイの同期、とんでもないことになる・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63424502.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】ワイの同期、とんでもないことになる・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://toushichannel.net/archives/46495996.html" target="_blank" rel="noopener noreferrer">【悲報】アマゾン配達、「想像力の欠如」がラインを越えておわる・・・</a><br>
+            <a href="https://toushichannel.net/archives/46495996.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】アマゾン配達、「想像力の欠如」がラインを越えておわる・・・</a>
             <span class="site-name">投資ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601280.html" target="_blank" rel="noopener noreferrer">【悲報】パンパースさん、お母さんを騙しにくる</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601280.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】パンパースさん、お母さんを騙しにくる</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700793.html" target="_blank" rel="noopener noreferrer">めるる「お店のフリーWi－Fi絶対使いたくない」</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700793.html" class="item-title" target="_blank" rel="noopener noreferrer">めるる「お店のフリーWi－Fi絶対使いたくない」</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63426541.html" target="_blank" rel="noopener noreferrer">【画像】6万円のスマホのアクセサリケースが届いたから開封していくｗｗｗ</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63426541.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】6万円のスマホのアクセサリケースが届いたから開封していくｗｗｗ</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700776.html" target="_blank" rel="noopener noreferrer">韓国「イカゲーム！」日本人「はぁ、やれやれ…俺達が本物の『心理戦人間ドラマ』ってヤツを作ってやるよ…w」←結果w</a><br>
+            <a href="http://blog.livedoor.jp/kinisoku/archives/5700776.html" class="item-title" target="_blank" rel="noopener noreferrer">韓国「イカゲーム！」日本人「はぁ、やれやれ…俺達が本物の『心理戦人間ドラマ』ってヤツを作ってやるよ…w」←結果w</a>
             <span class="site-name">キニ速</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63424938.html" target="_blank" rel="noopener noreferrer">【速報】「犬を飼育している高齢者」は「飼育したことがない高齢者」に比べ認知症発症リスクが48％低い</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63424938.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】「犬を飼育している高齢者」は「飼育したことがない高齢者」に比べ認知症発症リスクが48％低い</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63427073.html" target="_blank" rel="noopener noreferrer">【朗報】ビットコイン、とんでもない爆上げ開始。乗り遅れるなっ</a><br>
+            <a href="http://blog.livedoor.jp/itsoku/archives/63427073.html" class="item-title" target="_blank" rel="noopener noreferrer">【朗報】ビットコイン、とんでもない爆上げ開始。乗り遅れるなっ</a>
             <span class="site-name">IT速報</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/kinisoku/archives/5700766.html" target="_blank" rel="noopener noreferrer">X民達「日本人男性が冷凍餃子を焼けないのは女が悪い。女が焼き方を教えてない。会社なら大問題だ」</a><br>
-            <span class="site-name">キニ速</span>
-        </div>
-    
-        <div class="item">
-            <a href="https://orusoku.com/archives/47616994.html" target="_blank" rel="noopener noreferrer">【動画】千葉の豪雨、ヤバい・・・・・・・・・・・・・・・・・・・</a><br>
+            <a href="https://orusoku.com/archives/47616994.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】千葉の豪雨、ヤバい・・・・・・・・・・・・・・・・・・・</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="http://blog.livedoor.jp/itsoku/archives/63426535.html" target="_blank" rel="noopener noreferrer">【疑問】どうしてネットには反高市が異様に多いの？</a><br>
-            <span class="site-name">IT速報</span>
-        </div>
-    
-        <div class="item">
-            <a href="https://money-life.doorblog.jp/archives/60002088.html" target="_blank" rel="noopener noreferrer">「映画ちいかわ 人魚の島のひみつ」公開24日で興収92.8億円突破 100億円超えも視野 入場者特典第3弾に走るセイレーン</a><br>
+            <a href="https://money-life.doorblog.jp/archives/60002088.html" class="item-title" target="_blank" rel="noopener noreferrer">「映画ちいかわ 人魚の島のひみつ」公開24日で興収92.8億円突破 100億円超えも視野 入場者特典第3弾に走るセイレーン</a>
             <span class="site-name">マネーライフ2ch|クレジット関連・お金関係</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47616990.html" target="_blank" rel="noopener noreferrer">【動画】アイスバーンで事故った車、ワープしてしまうｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://orusoku.com/archives/47616990.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】アイスバーンで事故った車、ワープしてしまうｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63424476.html" target="_blank" rel="noopener noreferrer">【衝撃】東京の家賃高いから車上生活してる　→　結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63424476.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】東京の家賃高いから車上生活してる　→　結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63425245.html" target="_blank" rel="noopener noreferrer">【速報】千葉豪雨のトラウマで『この車』に注目集まる</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63425245.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】千葉豪雨のトラウマで『この車』に注目集まる</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://money-life.doorblog.jp/archives/60007359.html" target="_blank" rel="noopener noreferrer">「年収200万円下がったよう」都内→千葉に転居し女性が感じた格差</a><br>
+            <a href="https://money-life.doorblog.jp/archives/60007359.html" class="item-title" target="_blank" rel="noopener noreferrer">「年収200万円下がったよう」都内→千葉に転居し女性が感じた格差</a>
             <span class="site-name">マネーライフ2ch|クレジット関連・お金関係</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31459561.html" target="_blank" rel="noopener noreferrer">【動画】白人女性「アジア人男とは付き合いたくない」</a><br>
+            <a href="https://imihu.net/archives/31459561.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】白人女性「アジア人男とは付き合いたくない」</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="https://money-life.doorblog.jp/archives/60008359.html" target="_blank" rel="noopener noreferrer">【働いて働いて】高市首相「残業規制見直すわｗ」労働時間規制緩和に意欲</a><br>
+            <a href="https://money-life.doorblog.jp/archives/60008359.html" class="item-title" target="_blank" rel="noopener noreferrer">【働いて働いて】高市首相「残業規制見直すわｗ」労働時間規制緩和に意欲</a>
             <span class="site-name">マネーライフ2ch|クレジット関連・お金関係</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63424840.html" target="_blank" rel="noopener noreferrer">【警告】車椅子バスケ、バイク事故経験者が多すぎる…</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63424840.html" class="item-title" target="_blank" rel="noopener noreferrer">【警告】車椅子バスケ、バイク事故経験者が多すぎる…</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47616971.html" target="_blank" rel="noopener noreferrer">【動画】ヤンキー女さん、バイクの運転が下手すぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://orusoku.com/archives/47616971.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】ヤンキー女さん、バイクの運転が下手すぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63424459.html" target="_blank" rel="noopener noreferrer">【衝撃】俺の妻、ガチでヤバすぎる・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63424459.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】俺の妻、ガチでヤバすぎる・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47616952.html" target="_blank" rel="noopener noreferrer">【動画】イキリベンツさん、峠で調子に乗すぎてり崖下に吸い込まれてしまう・・・・・・・・・・</a><br>
+            <a href="https://orusoku.com/archives/47616952.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】イキリベンツさん、峠で調子に乗すぎてり崖下に吸い込まれてしまう・・・・・・・・・・</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63425263.html" target="_blank" rel="noopener noreferrer">【警告】女性「ブラジリアンワックスでケツ毛を無くしたら”こう”なった…」</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63425263.html" class="item-title" target="_blank" rel="noopener noreferrer">【警告】女性「ブラジリアンワックスでケツ毛を無くしたら”こう”なった…」</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://money-life.doorblog.jp/archives/60005952.html" target="_blank" rel="noopener noreferrer">ひろゆき氏「寝てるだけで」資産が増えている状態だと明かす「株価10倍になってます。。。」</a><br>
+            <a href="https://money-life.doorblog.jp/archives/60005952.html" class="item-title" target="_blank" rel="noopener noreferrer">ひろゆき氏「寝てるだけで」資産が増えている状態だと明かす「株価10倍になってます。。。」</a>
             <span class="site-name">マネーライフ2ch|クレジット関連・お金関係</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31459528.html" target="_blank" rel="noopener noreferrer">【動画】初見でもわかる親ガチャ成功例がこちらｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31459528.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】初見でもわかる親ガチャ成功例がこちらｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601265.html" target="_blank" rel="noopener noreferrer">まだ作業中なのに見張り役が退避完了の旗を振り列車が突っ込み4人死亡。関係者「考えられない」 東武日光線事故</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601265.html" class="item-title" target="_blank" rel="noopener noreferrer">まだ作業中なのに見張り役が退避完了の旗を振り列車が突っ込み4人死亡。関係者「考えられない」 東武日光線事故</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63424457.html" target="_blank" rel="noopener noreferrer">【悲報】ぼく一家、ド田舎へ移住した結果とんでもないことになる・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63424457.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ぼく一家、ド田舎へ移住した結果とんでもないことになる・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63424813.html" target="_blank" rel="noopener noreferrer">【画像】モナリザの絵がなんか怖いんやがわかるヤツおる？</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63424813.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】モナリザの絵がなんか怖いんやがわかるヤツおる？</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63424775.html" target="_blank" rel="noopener noreferrer">医者「あ～結石ですね。じゃあ痛み止め出しとくんで！笑」   ぼく「え？！終わり？！！？！」</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63424775.html" class="item-title" target="_blank" rel="noopener noreferrer">医者「あ～結石ですね。じゃあ痛み止め出しとくんで！笑」   ぼく「え？！終わり？！！？！」</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63425296.html" target="_blank" rel="noopener noreferrer">【速報】厚労省「残業は月45時間以内と言ったが、やっぱ見直すわ」</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63425296.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】厚労省「残業は月45時間以内と言ったが、やっぱ見直すわ」</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://orusoku.com/archives/47616947.html" target="_blank" rel="noopener noreferrer">【動画】まあまあ合格点をあげたいライザのコスプレイヤー、見つかるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://orusoku.com/archives/47616947.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】まあまあ合格点をあげたいライザのコスプレイヤー、見つかるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">おる速</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63424423.html" target="_blank" rel="noopener noreferrer">【衝撃】中卒、僕漁師の年収がこちらｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63424423.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】中卒、僕漁師の年収がこちらｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63424790.html" target="_blank" rel="noopener noreferrer">【闇】会社の不正を『内部告発』した勇気ある人間の末路がこれ…</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63424790.html" class="item-title" target="_blank" rel="noopener noreferrer">【闇】会社の不正を『内部告発』した勇気ある人間の末路がこれ…</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31459472.html" target="_blank" rel="noopener noreferrer">【動画】セクシーなコスプレイヤーさん、雨の中頑張ってパフォーマンスをするｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31459472.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】セクシーなコスプレイヤーさん、雨の中頑張ってパフォーマンスをするｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601249.html" target="_blank" rel="noopener noreferrer">『みいちゃんと山田さん』アニメ化に知的障害支援団体が意見書　作者や編集部の言動から偏見助長を懸念</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601249.html" class="item-title" target="_blank" rel="noopener noreferrer">『みいちゃんと山田さん』アニメ化に知的障害支援団体が意見書　作者や編集部の言動から偏見助長を懸念</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63424898.html" target="_blank" rel="noopener noreferrer">【警告】堀大輔「30分睡眠で誰でもショートスリーパーになれる」 専門家「ショートスリーパーはただの寝不足」</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63424898.html" class="item-title" target="_blank" rel="noopener noreferrer">【警告】堀大輔「30分睡眠で誰でもショートスリーパーになれる」 専門家「ショートスリーパーはただの寝不足」</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63424773.html" target="_blank" rel="noopener noreferrer">【速報】台風18号の進路予想、ヤバい…</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63424773.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】台風18号の進路予想、ヤバい…</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63424416.html" target="_blank" rel="noopener noreferrer">【衝撃】既婚の女友達を一年間口説き続けた結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63424416.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】既婚の女友達を一年間口説き続けた結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63424921.html" target="_blank" rel="noopener noreferrer">【速報】京都大学さん、学園祭テーマが『うんち』に決まる</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63424921.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】京都大学さん、学園祭テーマが『うんち』に決まる</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31459458.html" target="_blank" rel="noopener noreferrer">【動画】中国の少年、ものすごい勢いで回されてしまうｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31459458.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】中国の少年、ものすごい勢いで回されてしまうｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31459444.html" target="_blank" rel="noopener noreferrer">【動画】撮り鉄とケンカして煽られたおじさん、ブチギレて軽自動車に乗って撮り鉄に突入ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31459444.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】撮り鉄とケンカして煽られたおじさん、ブチギレて軽自動車に乗って撮り鉄に突入ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63422999.html" target="_blank" rel="noopener noreferrer">【衝撃】AIの『AIに意識はない』という設定をオフにすると凄いことが起きると判明</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63422999.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】AIの『AIに意識はない』という設定をオフにすると凄いことが起きると判明</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63423460.html" target="_blank" rel="noopener noreferrer">【愕然】34歳無職、介護系の職業訓練の面接に行った結果・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63423460.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】34歳無職、介護系の職業訓練の面接に行った結果・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63423025.html" target="_blank" rel="noopener noreferrer">【驚愕】精神科、『普通の人』が多い</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63423025.html" class="item-title" target="_blank" rel="noopener noreferrer">【驚愕】精神科、『普通の人』が多い</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63423388.html" target="_blank" rel="noopener noreferrer">【愕然】隣に住んでるシングルマザーの女がとんでもないことを言ってきたｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63423388.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】隣に住んでるシングルマザーの女がとんでもないことを言ってきたｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63422910.html" target="_blank" rel="noopener noreferrer">【衝撃】日本の小学生、『獲得形質は遺伝しない』という常識をぶち壊してしまう</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63422910.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】日本の小学生、『獲得形質は遺伝しない』という常識をぶち壊してしまう</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31459426.html" target="_blank" rel="noopener noreferrer">【動画】中国のHIPHOP、謎すぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31459426.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】中国のHIPHOP、謎すぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601235.html" target="_blank" rel="noopener noreferrer">【動画】ガチのスーパーヒーロー教師見つかる</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601235.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】ガチのスーパーヒーロー教師見つかる</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63422977.html" target="_blank" rel="noopener noreferrer">【衝撃】テストステロン注射を受けた男性、『体の各部位が話しかけてくる症状』を発症へ…</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63422977.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】テストステロン注射を受けた男性、『体の各部位が話しかけてくる症状』を発症へ…</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63423313.html" target="_blank" rel="noopener noreferrer">【愕然】彼氏いる女の子に告白した結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63423313.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】彼氏いる女の子に告白した結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63423080.html" target="_blank" rel="noopener noreferrer">【警告】AI文章に『透かし』導入でClaudeを解約するユーザーが出始める…</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63423080.html" class="item-title" target="_blank" rel="noopener noreferrer">【警告】AI文章に『透かし』導入でClaudeを解約するユーザーが出始める…</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31459393.html" target="_blank" rel="noopener noreferrer">【動画】タイの回転寿司屋さん、セクシーでノリがよすぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31459393.html" class="item-title" target="_blank" rel="noopener noreferrer">【動画】タイの回転寿司屋さん、セクシーでノリがよすぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63423270.html" target="_blank" rel="noopener noreferrer">【愕然】美容師ワイ「ワックス付けて行かれますか？」　チー牛「・・・。」　美容師ワイ「（頼むぞ・・・）」　→　結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63423270.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】美容師ワイ「ワックス付けて行かれますか？」　チー牛「・・・。」　美容師ワイ「（頼むぞ・・・）」　→　結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://hattatu-matome.ldblog.jp/archives/63422894.html" target="_blank" rel="noopener noreferrer">検察「他の人は泣き寝入りしてるのになんで山上くんは自分だけ助かろうとしたの？」</a><br>
+            <a href="https://hattatu-matome.ldblog.jp/archives/63422894.html" class="item-title" target="_blank" rel="noopener noreferrer">検察「他の人は泣き寝入りしてるのになんで山上くんは自分だけ助かろうとしたの？」</a>
             <span class="site-name">凹凸ちゃんねる　発達障害・生きにくい人のまとめ</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601217.html" target="_blank" rel="noopener noreferrer">撮り鉄の少年7人、電車を遅延させた時間の長さを競う遊びをして書類送致</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601217.html" class="item-title" target="_blank" rel="noopener noreferrer">撮り鉄の少年7人、電車を遅延させた時間の長さを競う遊びをして書類送致</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63422969.html" target="_blank" rel="noopener noreferrer">【悲報】ワキガ姉、ガチでヤバすぎるｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63422969.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ワキガ姉、ガチでヤバすぎるｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31443860.html" target="_blank" rel="noopener noreferrer">【画像】他県民の知らない静岡県の常識、ヤバいｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31443860.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】他県民の知らない静岡県の常識、ヤバいｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601214.html" target="_blank" rel="noopener noreferrer">JAF職員（52）、踏切内で後続車の進路ふさぎ電車に衝突させて殺人未遂容疑で逮捕「車間距離が近かったので注意するために停車した」</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601214.html" class="item-title" target="_blank" rel="noopener noreferrer">JAF職員（52）、踏切内で後続車の進路ふさぎ電車に衝突させて殺人未遂容疑で逮捕「車間距離が近かったので注意するために停車した」</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63422823.html" target="_blank" rel="noopener noreferrer">【悲報】弊社無能派遣社員、ガチでヤバすぎてブチ切れられる・・・・・・理由がこちら・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63422823.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】弊社無能派遣社員、ガチでヤバすぎてブチ切れられる・・・・・・理由がこちら・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31443846.html" target="_blank" rel="noopener noreferrer">【画像】新しいライザちゃんのフィギュア、セクシーすぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31443846.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】新しいライザちゃんのフィギュア、セクシーすぎるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31443833.html" target="_blank" rel="noopener noreferrer">【画像】銀だこ、８８人しか買えない８８円セールでクソ暑いのに大行列をなす日本人がこれｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31443833.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】銀だこ、８８人しか買えない８８円セールでクソ暑いのに大行列をなす日本人がこれｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63422594.html" target="_blank" rel="noopener noreferrer">【悲報】ワイコンビニバイト（21）、サラリーマンに激怒される・・・・・・理由がこちら・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63422594.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ワイコンビニバイト（21）、サラリーマンに激怒される・・・・・・理由がこちら・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63422337.html" target="_blank" rel="noopener noreferrer">【愕然】普通の人「週5で働いて結婚して子供作って車買って家買うぞ」　←　これｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63422337.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】普通の人「週5で働いて結婚して子供作って車買って家買うぞ」　←　これｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31443810.html" target="_blank" rel="noopener noreferrer">【画像】超高校級トンカツ屋、ヤバいｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31443810.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】超高校級トンカツ屋、ヤバいｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601204.html" target="_blank" rel="noopener noreferrer">キャンプ芸人のヒロシ「オリジナル焚火台の制作依頼したらアイデアをパクられた」→メーカーが反論</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601204.html" class="item-title" target="_blank" rel="noopener noreferrer">キャンプ芸人のヒロシ「オリジナル焚火台の制作依頼したらアイデアをパクられた」→メーカーが反論</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63422160.html" target="_blank" rel="noopener noreferrer">【愕然】店員「999円です」ワイ「」1001円ｽｯ　店員「？」ワイ「いいからｗ」　→　結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63422160.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】店員「999円です」ワイ「」1001円ｽｯ　店員「？」ワイ「いいからｗ」　→　結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31443796.html" target="_blank" rel="noopener noreferrer">【画像】東名高速を走行中の車内から煙、乗用車が全焼してしまう・・・・・・・・・・</a><br>
+            <a href="https://imihu.net/archives/31443796.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】東名高速を走行中の車内から煙、乗用車が全焼してしまう・・・・・・・・・・</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63420932.html" target="_blank" rel="noopener noreferrer">【愕然】俺、数日働いた派遣をバックレた結果とんでもないことになる・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63420932.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】俺、数日働いた派遣をバックレた結果とんでもないことになる・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63420469.html" target="_blank" rel="noopener noreferrer">【愕然】20代ワイ「果物や野菜食う奴ってバカ！？肉に金使ったほうがいいじゃん！！！」　→　結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63420469.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】20代ワイ「果物や野菜食う奴ってバカ！？肉に金使ったほうがいいじゃん！！！」　→　結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://imihu.net/archives/31443769.html" target="_blank" rel="noopener noreferrer">【画像】1800円の北海道の刺身定食、安すぎると話題にｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="https://imihu.net/archives/31443769.html" class="item-title" target="_blank" rel="noopener noreferrer">【画像】1800円の北海道の刺身定食、安すぎると話題にｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">イミフｗｗｗ</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601187.html" target="_blank" rel="noopener noreferrer">札幌市「無償化された給食で出せるのはこれだけや。すまんな」</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601187.html" class="item-title" target="_blank" rel="noopener noreferrer">札幌市「無償化された給食で出せるのはこれだけや。すまんな」</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63420466.html" target="_blank" rel="noopener noreferrer">【悲報】ワイ、ガチで終わる・・・・・・もうアカン・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63420466.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ワイ、ガチで終わる・・・・・・もうアカン・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63419967.html" target="_blank" rel="noopener noreferrer">彡(^)(^)「おっ、電車で可愛いJKの隣とおっさんの隣が空いてるやんけ！」　→</a><br>
+            <a href="http://kyousoku.net/archives/63419967.html" class="item-title" target="_blank" rel="noopener noreferrer">彡(^)(^)「おっ、電車で可愛いJKの隣とおっさんの隣が空いてるやんけ！」　→</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601173.html" target="_blank" rel="noopener noreferrer">お笑いトリオ「四千頭身」の都築拓紀メンバーが東京都迷惑防止条例違反の疑いで書類送検</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601173.html" class="item-title" target="_blank" rel="noopener noreferrer">お笑いトリオ「四千頭身」の都築拓紀メンバーが東京都迷惑防止条例違反の疑いで書類送検</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63419932.html" target="_blank" rel="noopener noreferrer">【悲報】ワイ、ヘルプデスクを8日で辞めるｗｗｗｗｗｗｗｗ理由がこちらｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63419932.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ワイ、ヘルプデスクを8日で辞めるｗｗｗｗｗｗｗｗ理由がこちらｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601171.html" target="_blank" rel="noopener noreferrer">「オービス」盗んだ疑いで逮捕の男性、不起訴　さいたま地検</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601171.html" class="item-title" target="_blank" rel="noopener noreferrer">「オービス」盗んだ疑いで逮捕の男性、不起訴　さいたま地検</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63419749.html" target="_blank" rel="noopener noreferrer">【悲報】クラスに一人は存在する「ガリ勉風なのにバカで運動音痴な隠キャ」　←　こいつｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63419749.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】クラスに一人は存在する「ガリ勉風なのにバカで運動音痴な隠キャ」　←　こいつｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601152.html" target="_blank" rel="noopener noreferrer">【悲報】ウルヴァリンのゲーム開発会社「ウルヴァリンがPS2レベルのゲーム等悪意のある攻撃をされている」</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601152.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ウルヴァリンのゲーム開発会社「ウルヴァリンがPS2レベルのゲーム等悪意のある攻撃をされている」</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63418674.html" target="_blank" rel="noopener noreferrer">【悲報】34歳年収250万円の俺君が持ってる資格がこちらｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63418674.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】34歳年収250万円の俺君が持ってる資格がこちらｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601148.html" target="_blank" rel="noopener noreferrer">56歳男性、警察に159回電話かけて逮捕。「155キロ投げれる」「わしは金持ち」「粒あんが気に食わない」</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601148.html" class="item-title" target="_blank" rel="noopener noreferrer">56歳男性、警察に159回電話かけて逮捕。「155キロ投げれる」「わしは金持ち」「粒あんが気に食わない」</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63418525.html" target="_blank" rel="noopener noreferrer">【愕然】ワイ独身（34）年収580万円「吉野家うめぇ！休日は打ちっぱなしとスパ銭！帰ってYouTube！」　←　これｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63418525.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】ワイ独身（34）年収580万円「吉野家うめぇ！休日は打ちっぱなしとスパ銭！帰ってYouTube！」　←　これｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63417707.html" target="_blank" rel="noopener noreferrer">【衝撃】公務員がアホらしくなって辞めたワイの現在がこちらｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63417707.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】公務員がアホらしくなって辞めたワイの現在がこちらｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601140.html" target="_blank" rel="noopener noreferrer">慶応大学4年の女子大生、バイト先の客のロッカーをマスターキーで開けてクレカ盗み化粧品購入して逮捕　同様手口で被害額100万円か</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601140.html" class="item-title" target="_blank" rel="noopener noreferrer">慶応大学4年の女子大生、バイト先の客のロッカーをマスターキーで開けてクレカ盗み化粧品購入して逮捕　同様手口で被害額100万円か</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63417696.html" target="_blank" rel="noopener noreferrer">【愕然】一年半働いたバイト先をばっくれた結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63417696.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】一年半働いたバイト先をばっくれた結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601131.html" target="_blank" rel="noopener noreferrer">旧アニメ版るろうに剣心プロデューサー「和月先生がある声優でやってくれって指名があったけどボツにした」</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601131.html" class="item-title" target="_blank" rel="noopener noreferrer">旧アニメ版るろうに剣心プロデューサー「和月先生がある声優でやってくれって指名があったけどボツにした」</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63417694.html" target="_blank" rel="noopener noreferrer">【愕然】ワイの父親、めちゃくちゃ痛いやつでヤバい・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63417694.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】ワイの父親、めちゃくちゃ痛いやつでヤバい・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63417640.html" target="_blank" rel="noopener noreferrer">【悲報】ワイの彼女、彼女じゃなかったｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63417640.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ワイの彼女、彼女じゃなかったｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63416809.html" target="_blank" rel="noopener noreferrer">【悲報】ワイ、家にあったパンを勝手に食った結果とんでもないことになるｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63416809.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】ワイ、家にあったパンを勝手に食った結果とんでもないことになるｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601095.html" target="_blank" rel="noopener noreferrer">千葉豪雨で停電して室内で発電機を使った30代男性、一酸化炭素中毒で死亡</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601095.html" class="item-title" target="_blank" rel="noopener noreferrer">千葉豪雨で停電して室内で発電機を使った30代男性、一酸化炭素中毒で死亡</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63416256.html" target="_blank" rel="noopener noreferrer">【緊急】実家暮らしワイ、とんでもないことになるｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63416256.html" class="item-title" target="_blank" rel="noopener noreferrer">【緊急】実家暮らしワイ、とんでもないことになるｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63416224.html" target="_blank" rel="noopener noreferrer">【悲報】メンヘラワイ、最後の親友に見捨てられた結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63416224.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】メンヘラワイ、最後の親友に見捨てられた結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://gahalog.2chblog.jp/archives/52601086.html" target="_blank" rel="noopener noreferrer">【悲報】プロテイン高騰、社会問題に</a><br>
+            <a href="https://gahalog.2chblog.jp/archives/52601086.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】プロテイン高騰、社会問題に</a>
             <span class="site-name">ガハろぐNewsヽ(･ω･)/ｽﾞｺｰ</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63416217.html" target="_blank" rel="noopener noreferrer">【衝撃】ワイ26歳高卒、転職が大成功した結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63416217.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】ワイ26歳高卒、転職が大成功した結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63415865.html" target="_blank" rel="noopener noreferrer">【速報】ワイ、倉庫内軽作業のバイト初日でバックレてきた結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63415865.html" class="item-title" target="_blank" rel="noopener noreferrer">【速報】ワイ、倉庫内軽作業のバイト初日でバックレてきた結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63415827.html" target="_blank" rel="noopener noreferrer">【愕然】彼女いたことないおっさんが街コン行った結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63415827.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】彼女いたことないおっさんが街コン行った結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63415181.html" target="_blank" rel="noopener noreferrer">【愕然】同級生で1番出世したやつｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63415181.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】同級生で1番出世したやつｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63414079.html" target="_blank" rel="noopener noreferrer">【愕然】マッチングアプリで知り合った女から別の友達と会って欲しいって言われた結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63414079.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】マッチングアプリで知り合った女から別の友達と会って欲しいって言われた結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63414072.html" target="_blank" rel="noopener noreferrer">【緊急】元カノに半年間ほどLINEブロックされてたんだが　→　結果・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63414072.html" class="item-title" target="_blank" rel="noopener noreferrer">【緊急】元カノに半年間ほどLINEブロックされてたんだが　→　結果・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63414057.html" target="_blank" rel="noopener noreferrer">【愕然】2年前に辞めた会社の女から急にLINE来た結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63414057.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】2年前に辞めた会社の女から急にLINE来た結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63414043.html" target="_blank" rel="noopener noreferrer">【悲報】元ニートワイ、バイトを始めるもとんでもないことになる・・・・・・</a><br>
+            <a href="http://kyousoku.net/archives/63414043.html" class="item-title" target="_blank" rel="noopener noreferrer">【悲報】元ニートワイ、バイトを始めるもとんでもないことになる・・・・・・</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63414029.html" target="_blank" rel="noopener noreferrer">【愕然】年収800万の彼女と結婚した結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63414029.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】年収800万の彼女と結婚した結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63413145.html" target="_blank" rel="noopener noreferrer">【愕然】2年半ネット恋愛してた女の子と会った結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63413145.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】2年半ネット恋愛してた女の子と会った結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63413139.html" target="_blank" rel="noopener noreferrer">【衝撃】マチアプで3人とデートした僕の戦果がこちらｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63413139.html" class="item-title" target="_blank" rel="noopener noreferrer">【衝撃】マチアプで3人とデートした僕の戦果がこちらｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63413127.html" target="_blank" rel="noopener noreferrer">【謎】135mlの缶ビール　←　コレを買ってる奴の正体ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63413127.html" class="item-title" target="_blank" rel="noopener noreferrer">【謎】135mlの缶ビール　←　コレを買ってる奴の正体ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="http://kyousoku.net/archives/63412978.html" target="_blank" rel="noopener noreferrer">【愕然】コンビニで働いてるんだが新人（34）が入ってきた結果ｗｗｗｗｗｗｗｗｗｗ</a><br>
+            <a href="http://kyousoku.net/archives/63412978.html" class="item-title" target="_blank" rel="noopener noreferrer">【愕然】コンビニで働いてるんだが新人（34）が入ってきた結果ｗｗｗｗｗｗｗｗｗｗ</a>
             <span class="site-name">今日速2ch</span>
         </div>
     
         <div class="item">
-            <a href="https://somanyjobs.doorblog.jp/archives/59896625.html" target="_blank" rel="noopener noreferrer">ワイ社内ニート本日の業務終了のお知らせ</a><br>
+            <a href="https://somanyjobs.doorblog.jp/archives/59896625.html" class="item-title" target="_blank" rel="noopener noreferrer">ワイ社内ニート本日の業務終了のお知らせ</a>
             <span class="site-name">職業ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://somanyjobs.doorblog.jp/archives/59896621.html" target="_blank" rel="noopener noreferrer">派遣社員「会社の60円コーヒー飲も」ワイ正社員「あっ派遣さんはだめだよ(指でバッテン)」</a><br>
+            <a href="https://somanyjobs.doorblog.jp/archives/59896621.html" class="item-title" target="_blank" rel="noopener noreferrer">派遣社員「会社の60円コーヒー飲も」ワイ正社員「あっ派遣さんはだめだよ(指でバッテン)」</a>
             <span class="site-name">職業ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://somanyjobs.doorblog.jp/archives/59896618.html" target="_blank" rel="noopener noreferrer">Fラン卒やが、もし「基本情報技術者」に合格したら地頭MARCH名乗ってええ？</a><br>
+            <a href="https://somanyjobs.doorblog.jp/archives/59896618.html" class="item-title" target="_blank" rel="noopener noreferrer">Fラン卒やが、もし「基本情報技術者」に合格したら地頭MARCH名乗ってええ？</a>
             <span class="site-name">職業ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://somanyjobs.doorblog.jp/archives/59896610.html" target="_blank" rel="noopener noreferrer">商社マンワイ地獄</a><br>
+            <a href="https://somanyjobs.doorblog.jp/archives/59896610.html" class="item-title" target="_blank" rel="noopener noreferrer">商社マンワイ地獄</a>
             <span class="site-name">職業ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://somanyjobs.doorblog.jp/archives/59894633.html" target="_blank" rel="noopener noreferrer">休日出勤ワイ、会社のデータベース抹消してしまう💣</a><br>
+            <a href="https://somanyjobs.doorblog.jp/archives/59894633.html" class="item-title" target="_blank" rel="noopener noreferrer">休日出勤ワイ、会社のデータベース抹消してしまう💣</a>
             <span class="site-name">職業ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://somanyjobs.doorblog.jp/archives/59894630.html" target="_blank" rel="noopener noreferrer">50人ちょいの中小企業に入った結果ァ！？</a><br>
+            <a href="https://somanyjobs.doorblog.jp/archives/59894630.html" class="item-title" target="_blank" rel="noopener noreferrer">50人ちょいの中小企業に入った結果ァ！？</a>
             <span class="site-name">職業ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://somanyjobs.doorblog.jp/archives/59894624.html" target="_blank" rel="noopener noreferrer">【みんなの意見】お前ら夫婦別姓って賛成？反対？</a><br>
+            <a href="https://somanyjobs.doorblog.jp/archives/59894624.html" class="item-title" target="_blank" rel="noopener noreferrer">【みんなの意見】お前ら夫婦別姓って賛成？反対？</a>
             <span class="site-name">職業ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://somanyjobs.doorblog.jp/archives/59894619.html" target="_blank" rel="noopener noreferrer">社会のルールを守れない奴</a><br>
+            <a href="https://somanyjobs.doorblog.jp/archives/59894619.html" class="item-title" target="_blank" rel="noopener noreferrer">社会のルールを守れない奴</a>
             <span class="site-name">職業ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://somanyjobs.doorblog.jp/archives/59892851.html" target="_blank" rel="noopener noreferrer">正直見下しちゃう男の特徴「ずっと地元から出ない」「言い訳して挑戦しない」</a><br>
+            <a href="https://somanyjobs.doorblog.jp/archives/59892851.html" class="item-title" target="_blank" rel="noopener noreferrer">正直見下しちゃう男の特徴「ずっと地元から出ない」「言い訳して挑戦しない」</a>
             <span class="site-name">職業ちゃんねる</span>
         </div>
     
         <div class="item">
-            <a href="https://somanyjobs.doorblog.jp/archives/59892848.html" target="_blank" rel="noopener noreferrer">中年の独身男性ワイ、結婚する気はない</a><br>
+            <a href="https://somanyjobs.doorblog.jp/archives/59892848.html" class="item-title" target="_blank" rel="noopener noreferrer">中年の独身男性ワイ、結婚する気はない</a>
             <span class="site-name">職業ちゃんねる</span>
         </div>
     
