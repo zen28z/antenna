@@ -55,6 +55,7 @@ all_items.sort(
 )
 
 # HTMLの生成
+# HTMLの生成（モダンなCSSを適用）
 html_content = """<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -62,14 +63,110 @@ html_content = """<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>アンテナページ</title>
     <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; }
-        .item { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
-        .site-name { font-size: 0.8em; color: #666; }
+        /* カラーパレットの定義 */
+        :root {
+            --bg-color: #f3f4f6;
+            --text-color: #1f2937;
+            --card-bg: #ffffff;
+            --link-color: #2563eb;
+            --link-hover: #1d4ed8;
+            --meta-color: #6b7280;
+            --border-color: #e5e7eb;
+        }
+        
+        /* ダークモード対応 */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #111827;
+                --text-color: #f9fafb;
+                --card-bg: #1f2937;
+                --link-color: #60a5fa;
+                --link-hover: #93c5fd;
+                --meta-color: #9ca3af;
+                --border-color: #374151;
+            }
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.025em;
+        }
+
+        .update-time {
+            text-align: center;
+            color: var(--meta-color);
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px; /* カード間の余白 */
+        }
+
+        /* カードデザイン */
+        .item {
+            background: var(--card-bg);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* ホバー時のアニメーション */
+        .item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.05);
+            border-color: var(--link-color);
+        }
+
+        .item-title {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        .item-title:hover {
+            color: var(--link-hover);
+        }
+
+        /* サイト名のバッジ風デザイン */
+        .site-name {
+            display: inline-block;
+            background-color: var(--border-color);
+            color: var(--text-color);
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            align-self: flex-start;
+        }
     </style>
 </head>
 <body>
     <h1>アンテナページ</h1>
-    <p>最終更新: {update_time}</p>
+    <div class="update-time">最終更新: {update_time}</div>
     <div class="container">
 """
 
@@ -77,7 +174,7 @@ html_content = """<!DOCTYPE html>
 for item in all_items:
     html_content += f"""
         <div class="item">
-            <a href="{item['link']}" target="_blank" rel="noopener noreferrer">{item['title']}</a><br>
+            <a href="{item['link']}" class="item-title" target="_blank" rel="noopener noreferrer">{item['title']}</a>
             <span class="site-name">{item['site_name']}</span>
         </div>
     """
@@ -88,7 +185,7 @@ html_content += """
 </html>
 """
 
-# 現在時刻を取得してHTMLに埋め込む
+# 現在時刻を取得してHTMLに埋め込む（先ほど修正した部分）
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 html_content = html_content.replace("{update_time}", current_time)
 
