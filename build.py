@@ -90,7 +90,8 @@ html_content += """
 
 # 現在時刻を取得してHTMLに埋め込む
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-html_content = html_content.format(update_time=current_time)
+html_content = html_content.replace("{update_time}", current_time)
+
 
 # index.htmlとして保存
 with open("index.html", "w", encoding="utf-8") as f:
